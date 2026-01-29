@@ -60,5 +60,14 @@
   "header": {
     "language": "Language",
     "theme": "Theme"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "services": "Services",
+    "credentials": "Credentials & Certifications",
+    "contact": "Contact",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
   }
 }

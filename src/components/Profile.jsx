@@ -7,7 +7,7 @@ const Profile = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="profile" aria-label={t('profile.name')}>
+    <section className="profile" id="home" aria-label={t('profile.name')}>
       <div className="profile-container">
         <div className="profile-image">
           <img 
