@@ -39,6 +39,24 @@ describe('Services', () => {
     expect(cards.length).toBeGreaterThan(0);
   });
 
+  it('uses IconWrapper components for service icons', () => {
+    const { container } = render(
+      <TestWrapper>
+        <Services />
+      </TestWrapper>
+    );
+
+    // Check that IconWrapper components are rendered
+    const iconWrappers = container.querySelectorAll('.icon-wrapper');
+    expect(iconWrappers.length).toBe(8); // 8 services
+    
+    // Verify they have the large size class (as used in Services component)
+    iconWrappers.forEach(wrapper => {
+      expect(wrapper).toHaveClass('icon-wrapper-large');
+      expect(wrapper).toHaveClass('icon-wrapper-rotate-right');
+    });
+  });
+
   it('should have no accessibility violations', async () => {
     const { container } = render(
       <TestWrapper>

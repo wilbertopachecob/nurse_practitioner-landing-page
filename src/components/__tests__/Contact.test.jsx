@@ -49,6 +49,24 @@ describe('Contact', () => {
     expect(iframe).toBeInTheDocument();
   });
 
+  it('uses IconWrapper components for contact icons', () => {
+    const { container } = render(
+      <TestWrapper>
+        <Contact />
+      </TestWrapper>
+    );
+
+    // Check that IconWrapper components are rendered (3 contact items)
+    const iconWrappers = container.querySelectorAll('.icon-wrapper');
+    expect(iconWrappers.length).toBe(3);
+    
+    // Verify they have the medium size class (as used in Contact component)
+    iconWrappers.forEach(wrapper => {
+      expect(wrapper).toHaveClass('icon-wrapper-medium');
+      expect(wrapper).toHaveClass('icon-wrapper-rotate-right');
+    });
+  });
+
   it('should have no accessibility violations', async () => {
     const { container } = render(
       <TestWrapper>
