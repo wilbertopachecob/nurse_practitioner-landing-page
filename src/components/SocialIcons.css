@@ -1,0 +1,24 @@
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  background-color: var(--text-accent);
+  color: white;
+  transform: translateY(-2px);
+}
