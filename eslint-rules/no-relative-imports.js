@@ -10,8 +10,9 @@ export default {
       ImportDeclaration(node) {
         const importPath = node.source.value;
         
-        // Allow CSS imports
-        if (importPath.endsWith('.css')) {
+        // Allow CSS imports (including query strings and hashes)
+        // Matches: .css, .css?inline, .css#hash, .module.css, etc.
+        if (importPath.includes('.css')) {
           return;
         }
         
