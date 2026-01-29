@@ -2,8 +2,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import Navigation from '@/components/Navigation';
-import { LanguageProvider } from '@/contexts/LanguageContext';
-import { ThemeProvider } from '@/contexts/ThemeContext';
+import { TestWrapper } from '@/test/utils';
 import '@/test/i18n';
 
 // Mock window.scrollTo
@@ -17,14 +16,6 @@ const mockWindowWidth = (width) => {
     value: width,
   });
 };
-
-const TestWrapper = ({ children }) => (
-  <ThemeProvider>
-    <LanguageProvider>
-      {children}
-    </LanguageProvider>
-  </ThemeProvider>
-);
 
 describe('Navigation', () => {
   beforeEach(() => {

@@ -9,6 +9,8 @@ import {
   FaBrain,
   FaHandsHelping
 } from 'react-icons/fa';
+import { SECTIONS } from '@/constants';
+import IconWrapper from '@/components/IconWrapper/IconWrapper';
 import './Services.css';
 
 const Services = () => {
@@ -58,14 +60,14 @@ const Services = () => {
   ];
 
   return (
-    <section className="services section" id="services" aria-labelledby="services-heading">
+    <section className="services section" id={SECTIONS.services} aria-labelledby="services-heading">
       <h2 id="services-heading">{t('services.title')}</h2>
       <div className="services-grid">
         {services.map((service, index) => (
-          <article key={index} className="service-card">
-            <div className="service-icon-wrapper" aria-hidden="true">
-              <div className="service-icon">{service.icon}</div>
-            </div>
+          <article key={index} className="service-card parent-hover">
+            <IconWrapper size="large" className="icon-wrapper-rotate-right">
+              {service.icon}
+            </IconWrapper>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
           </article>

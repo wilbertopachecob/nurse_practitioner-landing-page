@@ -1,11 +1,13 @@
+import { memo } from 'react';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { SOCIAL_MEDIA } from '@/constants';
 import './SocialIcons.css';
 
-const SocialIcons = () => {
+const SocialIcons = memo(() => {
   return (
     <div className="social-icons">
       <a 
-        href="https://www.instagram.com/ebellina555?igsh=MXI3NWN2cnI3Ymd1ZA%3D%3D&utm_source=qr" 
+        href={SOCIAL_MEDIA.instagram} 
         target="_blank" 
         rel="noopener noreferrer"
         aria-label="Instagram"
@@ -13,7 +15,7 @@ const SocialIcons = () => {
         <FaInstagram />
       </a>
       <a 
-        href="https://www.facebook.com/share/1DDE8X49tk/?mibextid=wwXIfr" 
+        href={SOCIAL_MEDIA.facebook} 
         target="_blank" 
         rel="noopener noreferrer"
         aria-label="Facebook"
@@ -22,6 +24,8 @@ const SocialIcons = () => {
       </a>
     </div>
   );
-};
+});
+
+SocialIcons.displayName = 'SocialIcons';
 
 export default SocialIcons;

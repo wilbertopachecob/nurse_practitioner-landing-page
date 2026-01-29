@@ -1,15 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { ThemeProvider } from '@/contexts/ThemeContext';
-import { LanguageProvider } from '@/contexts/LanguageContext';
+import { TestWrapper } from '@/test/utils';
 import About from '@/components/About';
-
-const TestWrapper = ({ children }) => (
-  <ThemeProvider>
-    <LanguageProvider>{children}</LanguageProvider>
-  </ThemeProvider>
-);
 
 describe('About', () => {
   it('renders about section', () => {

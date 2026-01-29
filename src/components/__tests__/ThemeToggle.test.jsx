@@ -1,12 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { ThemeProvider } from '@/contexts/ThemeContext';
+import { TestWrapper } from '@/test/utils';
 import ThemeToggle from '@/components/ThemeToggle';
-
-const TestWrapper = ({ children }) => (
-  <ThemeProvider>{children}</ThemeProvider>
-);
 
 describe('ThemeToggle', () => {
   it('renders theme toggle button', () => {

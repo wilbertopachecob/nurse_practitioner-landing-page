@@ -1,17 +1,17 @@
 import { useTranslation } from 'react-i18next';
-const profileImage = '/images/MPFInalImages-4_Original.jpeg';
 import { FaCalendarCheck, FaVideo } from 'react-icons/fa';
+import { CONTACT, IMAGES, SECTIONS } from '@/constants';
 import './Profile.css';
 
 const Profile = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="profile" id="home" aria-label={t('profile.name')}>
-      <div className="profile-container">
+    <section className="profile" id={SECTIONS.home} aria-label={t('profile.name')}>
+      <div className="profile-container container">
         <div className="profile-image">
           <img 
-            src={profileImage} 
+            src={IMAGES.profile} 
             alt={`${t('profile.name')} - ${t('profile.title')}`}
             loading="eager"
             width="500"
@@ -26,9 +26,9 @@ const Profile = () => {
           <p className="profile-subtitle">{t('profile.subtitle')}</p>
           <nav className="profile-cta" aria-label="Call to action">
             <a 
-              href="tel:+19189407158" 
+              href={CONTACT.phone.tel} 
               className="btn btn-primary"
-              aria-label={`${t('profile.cta')} - Call (918) 940-7158`}
+              aria-label={`${t('profile.cta')} - Call ${CONTACT.phone.display}`}
             >
               <FaCalendarCheck aria-hidden="true" />
               {t('profile.cta')}

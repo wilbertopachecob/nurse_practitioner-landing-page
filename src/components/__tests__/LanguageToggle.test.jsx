@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { LanguageProvider } from '@/contexts/LanguageContext';
+import { TestWrapper } from '@/test/utils';
 import LanguageToggle from '@/components/LanguageToggle';
 
 // Mock react-i18next
@@ -12,10 +12,6 @@ vi.mock('react-i18next', () => ({
     },
   }),
 }));
-
-const TestWrapper = ({ children }) => (
-  <LanguageProvider>{children}</LanguageProvider>
-);
 
 describe('LanguageToggle', () => {
   it('renders language toggle button', () => {

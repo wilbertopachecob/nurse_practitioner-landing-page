@@ -1,0 +1,95 @@
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.icon-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Size Variants */
+.icon-wrapper-small {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.icon-wrapper-medium {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+}
+
+.icon-wrapper-large {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+}
+
+/* Icon styling */
+.icon-wrapper svg {
+  color: white;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper-small svg {
+  font-size: 1.5rem;
+}
+
+.icon-wrapper-medium svg {
+  font-size: 1.75rem;
+}
+
+.icon-wrapper-large svg {
+  font-size: 2.5rem;
+}
+
+/* Variant Styles */
+.icon-wrapper-secondary {
+  background: var(--gradient-secondary);
+}
+
+/* Hover effects - parent should add hover class */
+.icon-wrapper-hoverable:hover,
+.parent-hover:hover .icon-wrapper {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.icon-wrapper-hoverable:hover::before,
+.parent-hover:hover .icon-wrapper::before {
+  opacity: 1;
+}
+
+/* Rotation variants for hover */
+.icon-wrapper-rotate-right:hover,
+.parent-hover:hover .icon-wrapper-rotate-right {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.icon-wrapper-rotate-left:hover,
+.parent-hover:hover .icon-wrapper-rotate-left {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.icon-wrapper-hoverable:hover svg,
+.parent-hover:hover .icon-wrapper svg {
+  transform: scale(1.1);
+}

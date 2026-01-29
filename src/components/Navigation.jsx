@@ -1,38 +1,17 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { SECTIONS } from '@/constants';
+import { scrollToSection } from '@/utils/scroll';
+import { useMobile } from '@/hooks/useMobile';
 import './Navigation.css';
 
 const Navigation = () => {
   const { t } = useTranslation();
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useMobile();
   const navRefs = useRef([]);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 968);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const scrollToSection = (targetId) => {
-    const element = document.getElementById(targetId);
-    if (element) {
-      const headerHeight = document.querySelector('.header').offsetHeight;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
@@ -45,11 +24,11 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: 'home', label: t('nav.home') },
-    { id: 'about', label: t('nav.about') },
-    { id: 'services', label: t('nav.services') },
-    { id: 'credentials', label: t('nav.credentials') },
-    { id: 'contact', label: t('nav.contact') }
+    { id: SECTIONS.home, label: t('nav.home') },
+    { id: SECTIONS.about, label: t('nav.about') },
+    { id: SECTIONS.services, label: t('nav.services') },
+    { id: SECTIONS.credentials, label: t('nav.credentials') },
+    { id: SECTIONS.contact, label: t('nav.contact') }
   ];
 
   const handleKeyDown = (e, index) => {

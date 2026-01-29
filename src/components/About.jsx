@@ -1,12 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { FaGraduationCap, FaMapMarkerAlt } from 'react-icons/fa';
+import { SECTIONS } from '@/constants';
 import './About.css';
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="about section" id="about" aria-labelledby="about-heading">
+    <section className="about section" id={SECTIONS.about} aria-labelledby="about-heading">
       <h2 id="about-heading">{t('about.title')}</h2>
       <article className="about-content">
         <div className="about-text">
