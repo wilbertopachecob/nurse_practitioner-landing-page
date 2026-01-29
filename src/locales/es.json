@@ -1,0 +1,64 @@
+{
+  "profile": {
+    "name": "Mical Pacheco, PMHNP-BC",
+    "title": "Enfermera Practicante Psiquiátrica Certificada",
+    "subtitle": "Aceptando Nuevos Pacientes",
+    "cta": "Reservar Cita",
+    "telehealth": "Telemedicina Disponible"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "summary": "Enfermera Practicante de Salud Mental Psiquiátrica certificada que brinda evaluación psiquiátrica integral y manejo de medicamentos a lo largo de la vida. Completé una capacitación clínica rigurosa a nivel de posgrado con énfasis en formulación diagnóstica, psicofarmacología, evaluación de riesgos y enfoques psicoterapéuticos basados en evidencia.",
+    "experience": "Tengo más de una década de experiencia en enfermería en psiquiatría hospitalaria, salud conductual ambulatoria, cuidados paliativos, atención aguda y salud pública.",
+    "approach": "Brindo atención psiquiátrica culturalmente receptiva e informada sobre trauma tanto en inglés como en español.",
+    "education": {
+      "title": "Educación",
+      "msn": "Maestría en Ciencias de Enfermería – Enfermera Practicante de Salud Mental Psiquiátrica, Universidad de Saint Louis (Diciembre 2025, GPA: 3.72)",
+      "bsn": "Licenciatura en Ciencias de Enfermería, Universidad Estatal del Noreste (2021)",
+      "adn": "Grado Asociado en Enfermería, Colegio Comunitario de Tulsa (2016)"
+    },
+    "location": "Broken Arrow, Oklahoma"
+  },
+  "services": {
+    "title": "Servicios",
+    "evaluations": "Evaluaciones Psiquiátricas Integrales",
+    "evaluationsDesc": "Evaluaciones diagnósticas DSM-5-TR a lo largo de la vida",
+    "medication": "Manejo de Medicamentos",
+    "medicationDesc": "Iniciación, titulación y monitoreo de medicamentos psiquiátricos",
+    "risk": "Evaluaciones de Riesgo y Planificación de Seguridad",
+    "riskDesc": "Evaluaciones de riesgo de suicidio y violencia con planificación de seguridad",
+    "crisis": "Intervención en Crisis",
+    "crisisDesc": "Apoyo e intervención inmediata durante crisis de salud mental",
+    "bilingual": "Atención Psiquiátrica Bilingüe",
+    "bilingualDesc": "Servicios disponibles en inglés y español",
+    "telehealth": "Servicios de Telemedicina",
+    "telehealthDesc": "Citas psiquiátricas virtuales compatibles con HIPAA",
+    "therapy": "Modalidades Psicoterapéuticas",
+    "therapyDesc": "TCC, Psicoterapia de Apoyo, Entrevista Motivacional, Atención Informada sobre Trauma, Psicoeducación",
+    "coordination": "Coordinación de Atención Interdisciplinaria",
+    "coordinationDesc": "Colaboración con terapeutas y otros proveedores de atención médica"
+  },
+  "credentials": {
+    "title": "Credenciales y Certificaciones",
+    "certification": "PMHNP-BC (Certificación de la Junta ANCC)",
+    "license": "APRN – Licencia de Oklahoma",
+    "rn": "Licencia Compacta de RN",
+    "certs": "Certificada en BLS, ACLS, RCP",
+    "position": "Posición Actual: Choose Courage Counseling Services, PLLC (2026–Presente)",
+    "languages": "Idiomas: Inglés (Nativo), Español (Clínico/Conversacional)"
+  },
+  "contact": {
+    "title": "Contacto",
+    "phone": "Teléfono",
+    "website": "Sitio Web",
+    "location": "Ubicación",
+    "practice": "Choose Courage Counseling Services, PLLC, Oklahoma"
+  },
+  "footer": {
+    "copyright": "© 2026 Mical Pacheco, PMHNP-BC. Todos los derechos reservados."
+  },
+  "header": {
+    "language": "Idioma",
+    "theme": "Tema"
+  }
+}

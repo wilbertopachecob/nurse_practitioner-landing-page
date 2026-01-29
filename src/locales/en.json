@@ -1,0 +1,64 @@
+{
+  "profile": {
+    "name": "Mical Pacheco, PMHNP-BC",
+    "title": "Board-Certified Psychiatric Nurse Practitioner",
+    "subtitle": "Accepting New Patients",
+    "cta": "Book Appointment",
+    "telehealth": "Telehealth Available"
+  },
+  "about": {
+    "title": "About Me",
+    "summary": "Board-certified Psychiatric Mental Health Nurse Practitioner providing comprehensive psychiatric evaluation and medication management across the lifespan. Completed rigorous graduate-level clinical training with emphasis on diagnostic formulation, psychopharmacology, risk assessment, and evidence-based psychotherapeutic approaches.",
+    "experience": "Brings over a decade of nursing experience across inpatient psychiatry, outpatient behavioral health, hospice, acute care, and public health.",
+    "approach": "Provides culturally responsive, trauma-informed psychiatric care in both English and Spanish.",
+    "education": {
+      "title": "Education",
+      "msn": "Master of Science in Nursing – Psychiatric Mental Health Nurse Practitioner, Saint Louis University (December 2025, GPA: 3.72)",
+      "bsn": "Bachelor of Science in Nursing, Northeastern State University (2021)",
+      "adn": "Associate Degree in Nursing, Tulsa Community College (2016)"
+    },
+    "location": "Broken Arrow, Oklahoma"
+  },
+  "services": {
+    "title": "Services",
+    "evaluations": "Comprehensive Psychiatric Evaluations",
+    "evaluationsDesc": "DSM-5-TR diagnostic assessments across the lifespan",
+    "medication": "Medication Management",
+    "medicationDesc": "Initiation, titration, and monitoring of psychiatric medications",
+    "risk": "Risk Assessments & Safety Planning",
+    "riskDesc": "Suicide and violence risk assessments with safety planning",
+    "crisis": "Crisis Intervention",
+    "crisisDesc": "Immediate support and intervention during mental health crises",
+    "bilingual": "Bilingual Psychiatric Care",
+    "bilingualDesc": "Services available in English and Spanish",
+    "telehealth": "Telehealth Services",
+    "telehealthDesc": "HIPAA-compliant virtual psychiatric appointments",
+    "therapy": "Psychotherapeutic Modalities",
+    "therapyDesc": "CBT, Supportive Psychotherapy, Motivational Interviewing, Trauma-Informed Care, Psychoeducation",
+    "coordination": "Interdisciplinary Care Coordination",
+    "coordinationDesc": "Collaboration with therapists and other healthcare providers"
+  },
+  "credentials": {
+    "title": "Credentials & Certifications",
+    "certification": "PMHNP-BC (ANCC Board Certification)",
+    "license": "APRN – Oklahoma License",
+    "rn": "RN Compact License",
+    "certs": "BLS, ACLS, CPR Certified",
+    "position": "Current Position: Choose Courage Counseling Services, PLLC (2026–Present)",
+    "languages": "Languages: English (Native), Spanish (Clinical/Conversational)"
+  },
+  "contact": {
+    "title": "Contact",
+    "phone": "Phone",
+    "website": "Website",
+    "location": "Location",
+    "practice": "Choose Courage Counseling Services, PLLC, Oklahoma"
+  },
+  "footer": {
+    "copyright": "© 2026 Mical Pacheco, PMHNP-BC. All rights reserved."
+  },
+  "header": {
+    "language": "Language",
+    "theme": "Theme"
+  }
+}
