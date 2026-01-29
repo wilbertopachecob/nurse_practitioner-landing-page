@@ -8,7 +8,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="contact section" id={SECTIONS.contact} aria-labelledby="contact-heading">
+    <section className="contact section pattern-orbs" id={SECTIONS.contact} aria-labelledby="contact-heading">
       <h2 id="contact-heading">{t('contact.title')}</h2>
       <div className="contact-content">
         <address className="contact-info">

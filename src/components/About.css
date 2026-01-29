@@ -1,6 +1,37 @@
 .about {
   background-color: var(--bg-secondary);
   position: relative;
+  overflow: hidden;
+}
+
+.about.pattern-overlay::before {
+  opacity: 0.4;
+}
+
+/* Floating decorative elements */
+.about::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--gradient-trust);
+  opacity: 0.05;
+  top: 15%;
+  right: 3%;
+  filter: blur(35px);
+  animation: floatSlow 25s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-25px, 25px);
+  }
 }
 
 .about-content {

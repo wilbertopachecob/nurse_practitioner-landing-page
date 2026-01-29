@@ -1,0 +1,131 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+/* Size Variants */
+.badge-small {
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+}
+
+.badge-medium {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.badge-large {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* Variant Styles */
+.badge-primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+}
+
+.badge-success {
+  background: var(--gradient-success);
+  color: white;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.badge-info {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+}
+
+.badge-warning {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
+}
+
+.badge-teal {
+  background: var(--gradient-teal);
+  color: white;
+  box-shadow: 0 2px 4px rgba(78, 205, 196, 0.2);
+}
+
+.badge-purple {
+  background: var(--gradient-purple);
+  color: white;
+  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
+}
+
+.badge-coral {
+  background: var(--gradient-coral);
+  color: white;
+  box-shadow: 0 2px 4px rgba(248, 113, 113, 0.2);
+}
+
+.badge-trust {
+  background: var(--gradient-trust);
+  color: white;
+  box-shadow: 0 2px 4px rgba(46, 134, 171, 0.2);
+}
+
+/* Icon Support */
+.badge-with-icon {
+  padding-left: 0.5rem;
+}
+
+.badge-icon {
+  display: flex;
+  align-items: center;
+  font-size: 0.875em;
+}
+
+.badge-small .badge-icon {
+  font-size: 0.75em;
+}
+
+.badge-large .badge-icon {
+  font-size: 1em;
+}
+
+.badge-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Hover Effects */
+.badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .badge-primary {
+  box-shadow: 0 2px 4px rgba(122, 184, 217, 0.3);
+}
+
+[data-theme="dark"] .badge-success {
+  box-shadow: 0 2px 4px rgba(52, 211, 153, 0.3);
+}
+
+[data-theme="dark"] .badge-teal {
+  box-shadow: 0 2px 4px rgba(94, 234, 212, 0.3);
+}
+
+[data-theme="dark"] .badge-purple {
+  box-shadow: 0 2px 4px rgba(167, 139, 250, 0.3);
+}
+
+[data-theme="dark"] .badge-coral {
+  box-shadow: 0 2px 4px rgba(252, 165, 165, 0.3);
+}
+
+[data-theme="dark"] .badge-trust {
+  box-shadow: 0 2px 4px rgba(96, 165, 250, 0.3);
+}

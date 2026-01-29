@@ -72,3 +72,170 @@
     padding: 2rem 1rem;
   }
 }
+
+/* Button Variants */
+.btn-gradient {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  box-shadow: var(--shadow-md), var(--shadow-colored);
+}
+
+.btn-gradient:hover {
+  background: var(--gradient-primary);
+  filter: brightness(1.1);
+  box-shadow: var(--shadow-lg), var(--shadow-colored);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent-primary);
+  border: none;
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background: var(--bg-accent);
+  color: var(--accent-primary-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Button Sizes */
+.btn-small {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.btn-medium {
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+}
+
+.btn-large {
+  padding: 1.25rem 3rem;
+  font-size: 1.125rem;
+}
+
+/* Button Loading State */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Card Variants */
+.card-elevated {
+  box-shadow: var(--shadow-lg), var(--shadow-colored);
+  border: 1px solid var(--border-color);
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-xl), var(--shadow-colored);
+  transform: translateY(-4px);
+}
+
+.card-outlined {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  box-shadow: none;
+}
+
+.card-outlined:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-primary);
+}
+
+.card-filled {
+  background: var(--bg-accent);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-filled:hover {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Badge Positioning */
+.card-badge {
+  position: relative;
+}
+
+.card-badge::after {
+  content: attr(data-badge);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+/* Ripple Effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Card Tilt Effect */
+.card-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card-tilt:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+}

@@ -10,14 +10,17 @@ import './IconWrapper.css';
  * @param {string} className - Additional CSS classes
  * @param {ReactNode} children - Icon element to wrap
  * @param {boolean} ariaHidden - Whether to hide icon from screen readers
+ * @param {string} badge - Optional badge text to display on icon
+ * @param {boolean} animated - Whether to apply pulse animation
  */
-const IconWrapper = ({ size = 'medium', variant = 'primary', className = '', children, ariaHidden = true }) => {
+const IconWrapper = ({ size = 'medium', variant = 'primary', className = '', children, ariaHidden = true, badge = null, animated = false }) => {
   return (
     <div 
-      className={`icon-wrapper icon-wrapper-${size} icon-wrapper-${variant} ${className}`.trim()}
+      className={`icon-wrapper icon-wrapper-${size} icon-wrapper-${variant} ${animated ? 'icon-wrapper-animated' : ''} ${className}`.trim()}
       aria-hidden={ariaHidden}
     >
       {children}
+      {badge && <span className="icon-badge">{badge}</span>}
     </div>
   );
 };
@@ -28,6 +31,8 @@ IconWrapper.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   ariaHidden: PropTypes.bool,
+  badge: PropTypes.string,
+  animated: PropTypes.bool,
 };
 
 export default IconWrapper;

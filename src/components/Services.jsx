@@ -60,7 +60,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="services section" id={SECTIONS.services} aria-labelledby="services-heading">
+    <section className="services section pattern-dots" id={SECTIONS.services} aria-labelledby="services-heading">
       <h2 id="services-heading">{t('services.title')}</h2>
       <div className="services-grid">
         {services.map((service, index) => (

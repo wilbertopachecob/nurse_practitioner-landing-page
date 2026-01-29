@@ -93,3 +93,104 @@
 .parent-hover:hover .icon-wrapper svg {
   transform: scale(1.1);
 }
+
+/* Icon Badge */
+.icon-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--gradient-coral);
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 0.125rem 0.375rem;
+  border-radius: 9999px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(248, 113, 113, 0.3);
+  z-index: 10;
+  line-height: 1;
+}
+
+.icon-wrapper-small .icon-badge {
+  font-size: 0.5rem;
+  padding: 0.125rem 0.25rem;
+  min-width: 14px;
+  height: 14px;
+  top: -4px;
+  right: -4px;
+}
+
+.icon-wrapper-large .icon-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  min-width: 22px;
+  height: 22px;
+  top: -8px;
+  right: -8px;
+}
+
+/* Icon Animations */
+.icon-wrapper-animated {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.icon-wrapper-animated:hover {
+  animation: none;
+}
+
+/* Icon Bounce Animation */
+.icon-wrapper-bounce {
+  animation: iconBounce 1s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Icon Rotate Animation */
+.icon-wrapper-rotate-continuous {
+  animation: iconRotate 3s linear infinite;
+}
+
+@keyframes iconRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icon Pulse Animation */
+.icon-wrapper-pulse {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}

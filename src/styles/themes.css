@@ -21,6 +21,23 @@
   --accent-green-hover: #5BA892;
   --accent-light-blue: #7FD3B8;
   
+  /* Enhanced Healthcare Color Palette */
+  --accent-teal: #4ECDC4;
+  --accent-teal-hover: #3AB8B0;
+  --accent-trust-blue: #2E86AB;
+  --accent-trust-blue-hover: #256A8A;
+  --accent-success: #10B981;
+  --accent-success-hover: #059669;
+  --accent-purple: #8B5CF6;
+  --accent-purple-hover: #7C3AED;
+  --accent-coral: #F87171;
+  --accent-coral-hover: #EF4444;
+  
+  /* Pattern Overlay Colors */
+  --pattern-overlay-light: rgba(74, 144, 226, 0.03);
+  --pattern-overlay-medium: rgba(74, 144, 226, 0.05);
+  --pattern-overlay-dark: rgba(74, 144, 226, 0.08);
+  
   /* Border & Divider */
   --border-color: #E2E8F0;
   --border-color-hover: #CBD5E1;
@@ -39,6 +56,11 @@
   --gradient-secondary: linear-gradient(135deg, #6BC4A6 0%, #7FD3B8 100%);
   --gradient-bg: linear-gradient(180deg, #F8FAFC 0%, #E8F2F8 100%);
   --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  --gradient-teal: linear-gradient(135deg, #4ECDC4 0%, #3AB8B0 100%);
+  --gradient-trust: linear-gradient(135deg, #2E86AB 0%, #256A8A 100%);
+  --gradient-success: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  --gradient-purple: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  --gradient-coral: linear-gradient(135deg, #F87171 0%, #EF4444 100%);
 }
 
 :root[data-theme="dark"] {
@@ -64,6 +86,23 @@
   --accent-green-hover: #7FD3B8;
   --accent-light-blue: #7FD3B8;
   
+  /* Enhanced Healthcare Color Palette - Dark Mode */
+  --accent-teal: #5EEAD4;
+  --accent-teal-hover: #2DD4BF;
+  --accent-trust-blue: #60A5FA;
+  --accent-trust-blue-hover: #3B82F6;
+  --accent-success: #34D399;
+  --accent-success-hover: #10B981;
+  --accent-purple: #A78BFA;
+  --accent-purple-hover: #8B5CF6;
+  --accent-coral: #FCA5A5;
+  --accent-coral-hover: #F87171;
+  
+  /* Pattern Overlay Colors - Dark Mode */
+  --pattern-overlay-light: rgba(122, 184, 217, 0.05);
+  --pattern-overlay-medium: rgba(122, 184, 217, 0.08);
+  --pattern-overlay-dark: rgba(122, 184, 217, 0.12);
+  
   /* Border & Divider */
   --border-color: #334155;
   --border-color-hover: #475569;
@@ -82,4 +121,9 @@
   --gradient-secondary: linear-gradient(135deg, #6BC4A6 0%, #7FD3B8 100%);
   --gradient-bg: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
   --gradient-card: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+  --gradient-teal: linear-gradient(135deg, #5EEAD4 0%, #2DD4BF 100%);
+  --gradient-trust: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+  --gradient-success: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  --gradient-purple: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+  --gradient-coral: linear-gradient(135deg, #FCA5A5 0%, #F87171 100%);
 }

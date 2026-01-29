@@ -1,6 +1,53 @@
 .services {
   background-color: var(--bg-primary);
   position: relative;
+  overflow: hidden;
+}
+
+.services.pattern-dots::before {
+  opacity: 0.3;
+}
+
+/* Floating decorative elements */
+.services::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--gradient-secondary);
+  opacity: 0.06;
+  top: 5%;
+  left: -75px;
+  filter: blur(30px);
+  animation: floatShape 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: var(--gradient-teal);
+  opacity: 0.05;
+  bottom: 10%;
+  right: -60px;
+  filter: blur(25px);
+  animation: floatShape 18s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(40px, -30px) rotate(180deg);
+  }
 }
 
 .services-grid {
@@ -22,6 +69,8 @@
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .service-card::before {
@@ -38,8 +87,8 @@
 }
 
 .service-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-lg), var(--shadow-colored);
+  transform: translateY(-8px) scale(1.02) rotateX(2deg) rotateY(-2deg);
+  box-shadow: var(--shadow-lg), var(--shadow-colored), 0 0 30px rgba(74, 144, 226, 0.15);
   border-color: var(--accent-primary);
 }
 

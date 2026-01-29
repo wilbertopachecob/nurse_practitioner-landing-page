@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="about section" id={SECTIONS.about} aria-labelledby="about-heading">
+    <section className="about section pattern-overlay" id={SECTIONS.about} aria-labelledby="about-heading">
       <h2 id="about-heading">{t('about.title')}</h2>
       <article className="about-content">
         <div className="about-text">

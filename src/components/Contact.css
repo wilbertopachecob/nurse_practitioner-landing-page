@@ -1,6 +1,12 @@
 .contact {
   background-color: var(--bg-primary);
   position: relative;
+  overflow: hidden;
+}
+
+.contact.pattern-orbs::before,
+.contact.pattern-orbs::after {
+  opacity: 0.1;
 }
 
 .contact-content {
@@ -27,12 +33,13 @@
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
+  transform-style: preserve-3d;
 }
 
 .contact-item:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(74, 144, 226, 0.1);
   border-color: var(--accent-primary);
-  transform: translateX(4px);
+  transform: translateX(4px) rotateY(-1deg);
 }
 
 .contact-icon-wrapper {

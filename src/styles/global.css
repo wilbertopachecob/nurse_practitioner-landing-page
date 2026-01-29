@@ -142,6 +142,66 @@ button:disabled {
   }
 }
 
+/* Typography Enhancements */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-teal {
+  background: var(--gradient-teal);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-md {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-glow {
+  text-shadow: 
+    0 0 10px rgba(74, 144, 226, 0.5),
+    0 0 20px rgba(74, 144, 226, 0.3),
+    0 0 30px rgba(74, 144, 226, 0.2);
+}
+
+[data-theme="dark"] .text-glow {
+  text-shadow: 
+    0 0 10px rgba(122, 184, 217, 0.6),
+    0 0 20px rgba(122, 184, 217, 0.4),
+    0 0 30px rgba(122, 184, 217, 0.3);
+}
+
+.text-glow-success {
+  text-shadow: 
+    0 0 10px rgba(16, 185, 129, 0.5),
+    0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.text-glow-teal {
+  text-shadow: 
+    0 0 10px rgba(78, 205, 196, 0.5),
+    0 0 20px rgba(78, 205, 196, 0.3);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -174,6 +234,39 @@ button:disabled {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -184,6 +277,51 @@ button:disabled {
 
 .slide-in-right {
   animation: slideInRight 0.6s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.rotate-in {
+  animation: rotateIn 0.6s ease-out forwards;
+}
+
+/* Scroll-triggered animation classes */
+[data-animate] {
+  opacity: 0;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+.animate-rotateIn {
+  animation: rotateIn 0.8s ease-out forwards;
+}
+
+.animate-visible {
+  opacity: 1;
 }
 
 /* Utility Classes */
