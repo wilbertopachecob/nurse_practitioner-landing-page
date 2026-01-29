@@ -2,18 +2,25 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg-primary);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 2px 4px var(--shadow);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .header {
+  background-color: rgba(15, 23, 42, 0.8);
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1.25rem 2rem;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .header-controls {
@@ -24,7 +31,7 @@
 
 @media (max-width: 768px) {
   .header-container {
-    padding: 0.75rem 1rem;
+    padding: 1rem 1rem;
   }
   
   .header-controls {

@@ -1,9 +1,23 @@
 .profile {
-  padding: 4rem 2rem;
-  background-color: var(--bg-secondary);
-  min-height: 80vh;
+  padding: 5rem 2rem;
+  background: var(--gradient-bg);
+  min-height: 85vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(74, 144, 226, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(107, 196, 166, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .profile-container {
@@ -11,47 +25,75 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .profile-image {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: var(--gradient-primary);
+  border-radius: 16px;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 .profile-image img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px var(--shadow);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xl), var(--shadow-colored);
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+  transform: scale(1.02);
 }
 
 .profile-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  animation: slideInRight 0.8s ease-out 0.2s both;
 }
 
 .profile-name {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .profile-title {
   font-size: 1.5rem;
-  color: var(--text-accent);
-  font-weight: 500;
+  color: var(--accent-primary);
+  font-weight: 600;
   margin-bottom: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .profile-subtitle {
   font-size: 1.25rem;
   color: var(--text-secondary);
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .profile-cta {
@@ -65,60 +107,115 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn > * {
+  position: relative;
+  z-index: 2;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn-primary {
-  background-color: var(--text-accent);
+  background: var(--gradient-primary);
   color: white;
+  box-shadow: var(--shadow-md), var(--shadow-colored);
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--shadow);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg), var(--shadow-colored);
+  filter: brightness(1.05);
+}
+
+.btn-primary:hover::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
 }
 
 .telehealth-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--bg-accent);
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--gradient-card);
   color: var(--text-primary);
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.telehealth-badge svg {
+  font-size: 1.25rem;
+  color: var(--accent-green);
+}
+
+.telehealth-badge:hover {
+  border-color: var(--accent-green);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 968px) {
   .profile-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
     text-align: center;
   }
   
   .profile-name {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
   
   .profile-cta {
     align-items: center;
   }
+  
+  .profile-image {
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 768px) {
   .profile {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     min-height: auto;
   }
   
+  .profile-container {
+    gap: 2rem;
+  }
+  
   .profile-name {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .profile-title {
@@ -127,5 +224,25 @@
   
   .profile-subtitle {
     font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .profile-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 1.875rem;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
