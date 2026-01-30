@@ -33,7 +33,7 @@ export const CONTACT = {
 
 // Social Media URLs
 export const SOCIAL_MEDIA = {
-  instagram: 'https://www.instagram.com/ebellina555?igsh=MXI3NWN2cnI3Ymd1ZA%3D%3D&utm_source=qr',
+  instagram: 'https://www.instagram.com/mical_pmhmp_bc',
   facebook: 'https://www.facebook.com/share/1DDE8X49tk/?mibextid=wwXIfr',
 } as const;
 
