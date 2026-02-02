@@ -11,9 +11,10 @@ const About: React.FC = () => {
       <h2 id="about-heading">{t('about.title')}</h2>
       <article className="about-content">
         <div className="about-text">
-          <p className="about-summary">{t('about.summary')}</p>
-          <p className="about-experience">{t('about.experience')}</p>
-          <p className="about-approach">{t('about.approach')}</p>
+          <p className="about-summary">{t('about.paragraph1')}</p>
+          <p className="about-experience">{t('about.paragraph2')}</p>
+          <p className="about-approach">{t('about.paragraph3')}</p>
+          <p className="about-approach">{t('about.paragraph4')}</p>
         </div>
         <div className="about-details">
           <section className="education" aria-labelledby="education-heading">

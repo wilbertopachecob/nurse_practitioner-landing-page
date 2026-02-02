@@ -8,9 +8,10 @@
   },
   "about": {
     "title": "About Me",
-    "summary": "Board-certified Psychiatric Mental Health Nurse Practitioner providing comprehensive psychiatric evaluation and medication management across the lifespan. Completed rigorous graduate-level clinical training with emphasis on diagnostic formulation, psychopharmacology, risk assessment, and evidence-based psychotherapeutic approaches.",
-    "experience": "Brings over a decade of nursing experience across inpatient psychiatry, outpatient behavioral health, hospice, acute care, and public health.",
-    "approach": "Provides culturally responsive, trauma-informed psychiatric care in both English and Spanish.",
+    "paragraph1": "Welcome. I am really glad you are here.",
+    "paragraph2": "Looking for mental health care can feel overwhelming, and just being here is an important first step. My practice is grounded in compassion, respect, and genuine connection. I believe care should feel safe, supportive, and tailored to you as a whole person.",
+    "paragraph3": "As a board certified Psychiatric Mental Health Nurse Practitioner, I take time to listen and understand your story, your concerns, and your goals. Whether you are feeling anxious, overwhelmed, stuck, or simply seeking clarity and support, you do not have to navigate it alone.",
+    "paragraph4": "It would be an honor to support you on your journey toward healing and balance.",
     "education": {
       "title": "Education",
       "msn": "Master of Science in Nursing – Psychiatric Mental Health Nurse Practitioner, Saint Louis University (December 2025)",
