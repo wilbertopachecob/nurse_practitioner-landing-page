@@ -20,6 +20,10 @@ export const CONTACT = {
     display: '(918) 940-7158',
     tel: 'tel:+19189407158',
   },
+  email: {
+    address: 'mical.pacheco.pmhnp@gmail.com',
+    mailto: 'mailto:mical.pacheco.pmhnp@gmail.com',
+  },
   website: {
     url: 'https://choosecouragecounseling.com',
     display: 'choosecouragecounseling.com',
