@@ -49,7 +49,7 @@ export const MAPS = {
 } as const;
 
 // Base URL for SEO
-export const BASE_URL = 'https://choosecouragecounseling.com/' as const;
+export const BASE_URL = 'https://www.micalpacheco.com/' as const;
 
 // Design Constants
 export const DESIGN = {
