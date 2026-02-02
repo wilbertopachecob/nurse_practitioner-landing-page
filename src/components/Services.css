@@ -2,6 +2,7 @@
   background-color: var(--bg-primary);
   position: relative;
   overflow: hidden;
+  background-image: var(--bg-primary);
 }
 
 .services.pattern-dots::before {
@@ -25,21 +26,22 @@
   z-index: 0;
 }
 
-.services::after {
+/* Removed decorative element to prevent bottom-right discoloration */
+/* .services::after {
   content: '';
   position: absolute;
   width: 120px;
   height: 120px;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   background: var(--gradient-teal);
-  opacity: 0.05;
-  bottom: 10%;
-  right: -60px;
-  filter: blur(25px);
+  opacity: 0.03;
+  bottom: 5%;
+  right: -120px;
+  filter: blur(50px);
   animation: floatShape 18s ease-in-out infinite reverse;
   pointer-events: none;
   z-index: 0;
-}
+} */
 
 @keyframes floatShape {
   0%, 100% {
@@ -55,6 +57,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .service-card {

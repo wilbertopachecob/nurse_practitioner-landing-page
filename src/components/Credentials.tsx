@@ -8,7 +8,7 @@ const Credentials: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="credentials section pattern-geometric" id={SECTIONS.credentials} aria-labelledby="credentials-heading">
+    <section className="credentials section" id={SECTIONS.credentials} aria-labelledby="credentials-heading">
       <h2 id="credentials-heading">{t('credentials.title')}</h2>
       <div className="credentials-grid">
         <article className="credential-item parent-hover">
