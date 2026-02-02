@@ -23,17 +23,11 @@ const Profile: React.FC = () => {
           <header>
             <h1 className="profile-name">{t('profile.name')}</h1>
             <h2 className="profile-title">{t('profile.title')}</h2>
+            <address className="profile-location">
+              <FaMapMarkerAlt aria-hidden="true" />
+              <span>{t('about.location')}</span>
+            </address>
           </header>
-          <p className="profile-subtitle">{t('profile.subtitle')}</p>
-          <address className="location">
-            <FaMapMarkerAlt aria-hidden="true" />
-            <span>{t('about.location')}</span>
-          </address>
-          <a href={CONTACT.email.mailto} className="location email-link">
-            <FaEnvelope aria-hidden="true" />
-            <span>{CONTACT.email.address}</span>
-          </a>
-          <SocialIcons />
           <nav className="profile-cta" aria-label="Call to action">
             <a
               href={CONTACT.phone.tel}
@@ -48,6 +42,13 @@ const Profile: React.FC = () => {
               {t('profile.telehealth')}
             </span>
           </nav>
+          <div className="profile-contact-group">
+            <a href={CONTACT.email.mailto} className="location email-link">
+              <FaEnvelope aria-hidden="true" />
+              <span>{CONTACT.email.address}</span>
+            </a>
+          </div>
+          <SocialIcons />
         </article>
       </div>
     </section>
