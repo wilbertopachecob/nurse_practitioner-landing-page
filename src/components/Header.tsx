@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation';
 import LanguageToggle from '@/components/LanguageToggle';
 import ThemeToggle from '@/components/ThemeToggle';
-import './Header.css';
+import '@/components/Header.css';
 
 const Header: React.FC = () => {
   return (

@@ -2,13 +2,13 @@ import { useTranslation } from 'react-i18next';
 import { FaPhone, FaGlobe, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
 import { CONTACT, MAPS, SECTIONS } from '@/constants';
 import IconWrapper from '@/components/IconWrapper/IconWrapper';
-import './Contact.css';
+import '@/components/Contact.css';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="contact section pattern-orbs" id={SECTIONS.contact} aria-labelledby="contact-heading">
+    <section className="contact section" id={SECTIONS.contact} aria-labelledby="contact-heading">
       <h2 id="contact-heading">{t('contact.title')}</h2>
       <div className="contact-content">
         <address className="contact-info">

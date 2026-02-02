@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { SECTIONS } from '@/constants';
 import { scrollToSection } from '@/utils/scroll';
 import { useMobile } from '@/hooks/useMobile';
-import './Navigation.css';
+import '@/components/Navigation.css';
 
 interface NavItem {
   id: string;

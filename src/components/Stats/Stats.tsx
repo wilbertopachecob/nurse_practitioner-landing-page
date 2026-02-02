@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import type { StatItemProps, StatsProps } from '@/types';
-import './Stats.css';
+import '@/components/Stats/Stats.css';
 
 /**
  * Stats Component

@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { SOCIAL_MEDIA } from '@/constants';
-import './SocialIcons.css';
+import '@/components/SocialIcons.css';
 
 const SocialIcons = memo(() => {
   return (

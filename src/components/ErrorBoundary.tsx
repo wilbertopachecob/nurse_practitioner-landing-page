@@ -1,6 +1,6 @@
 import { Component, ReactNode, ErrorInfo } from 'react';
 import type { ErrorBoundaryProps, ErrorBoundaryState } from '@/types';
-import './ErrorBoundary.css';
+import '@/components/ErrorBoundary.css';
 
 /**
  * ErrorBoundary Component

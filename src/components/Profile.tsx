@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FaCalendarCheck, FaVideo, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import { CONTACT, IMAGES, MAPS, SECTIONS } from '@/constants';
 import SocialIcons from '@/components/SocialIcons';
-import './Profile.css';
+import '@/components/Profile.css';
 
 const Profile: React.FC = () => {
   const { t } = useTranslation();

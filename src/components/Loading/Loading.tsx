@@ -1,5 +1,5 @@
 import type { SpinnerProps, SkeletonProps, ProgressBarProps, ShimmerProps } from '@/types';
-import './Loading.css';
+import '@/components/Loading/Loading.css';
 
 /**
  * Spinner Component

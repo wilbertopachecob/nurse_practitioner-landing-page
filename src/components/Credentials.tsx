@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FaCertificate, FaIdCard, FaHeartbeat, FaBriefcase, FaLanguage } from 'react-icons/fa';
 import { SECTIONS } from '@/constants';
 import IconWrapper from '@/components/IconWrapper/IconWrapper';
-import './Credentials.css';
+import '@/components/Credentials.css';
 
 const Credentials: React.FC = () => {
   const { t } = useTranslation();

@@ -1,5 +1,5 @@
 import type { IconWrapperProps } from '@/types';
-import './IconWrapper.css';
+import '@/components/IconWrapper/IconWrapper.css';
 
 /**
  * IconWrapper Component

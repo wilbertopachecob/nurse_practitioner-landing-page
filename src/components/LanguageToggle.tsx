@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { FaGlobe } from 'react-icons/fa';
-import './LanguageToggle.css';
+import '@/components/LanguageToggle.css';
 
 const LanguageToggle: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();

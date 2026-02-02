@@ -1,5 +1,5 @@
 import type { SectionDividerProps } from '@/types';
-import './SectionDivider.css';
+import '@/components/SectionDivider/SectionDivider.css';
 
 /**
  * SectionDivider Component

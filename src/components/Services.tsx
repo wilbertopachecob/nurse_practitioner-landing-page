@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 import { SECTIONS } from '@/constants';
 import IconWrapper from '@/components/IconWrapper/IconWrapper';
-import './Services.css';
+import '@/components/Services.css';
 
 interface Service {
   icon: React.ReactElement;

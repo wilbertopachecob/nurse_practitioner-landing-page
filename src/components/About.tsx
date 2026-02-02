@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FaGraduationCap } from 'react-icons/fa';
 import { SECTIONS } from '@/constants';
-import './About.css';
+import '@/components/About.css';
 
 const About: React.FC = () => {
   const { t } = useTranslation();

@@ -1,5 +1,5 @@
 import type { BadgeProps } from '@/types';
-import './Badge.css';
+import '@/components/Badge/Badge.css';
 
 /**
  * Badge Component

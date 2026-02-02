@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import './Footer.css';
+import '@/components/Footer.css';
 
 const Footer = memo(() => {
   const { t } = useTranslation();
