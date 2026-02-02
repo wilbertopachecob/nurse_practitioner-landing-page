@@ -12,29 +12,41 @@ const Contact: React.FC = () => {
       <h2 id="contact-heading">{t('contact.title')}</h2>
       <div className="contact-content">
         <address className="contact-info">
-          <div className="contact-item parent-hover">
+          <a 
+            href={CONTACT.phone.tel}
+            className="contact-item parent-hover"
+            aria-label={`Call ${CONTACT.phone.display}`}
+          >
             <IconWrapper size="medium" className="icon-wrapper-rotate-right">
               <FaPhone />
             </IconWrapper>
             <div className="contact-content-wrapper">
               <h3>{t('contact.phone')}</h3>
-              <a href={CONTACT.phone.tel} aria-label={`Call ${CONTACT.phone.display}`}>
-                {CONTACT.phone.display}
-              </a>
+              <p>{CONTACT.phone.display}</p>
             </div>
-          </div>
-          <div className="contact-item parent-hover">
+          </a>
+          <a 
+            href={CONTACT.website.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item parent-hover"
+            aria-label={`Visit ${CONTACT.website.display}`}
+          >
             <IconWrapper size="medium" className="icon-wrapper-rotate-right">
               <FaGlobe />
             </IconWrapper>
             <div className="contact-content-wrapper">
               <h3>{t('contact.website')}</h3>
-              <a href={CONTACT.website.url} target="_blank" rel="noopener noreferrer">
-                {CONTACT.website.display}
-              </a>
+              <p>{CONTACT.website.display}</p>
             </div>
-          </div>
-          <div className="contact-item parent-hover">
+          </a>
+          <a 
+            href={MAPS.linkUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-item parent-hover"
+            aria-label={`${t('contact.location')} - View on Google Maps`}
+          >
             <IconWrapper size="medium" className="icon-wrapper-rotate-right">
               <FaMapMarkerAlt />
             </IconWrapper>
@@ -42,7 +54,7 @@ const Contact: React.FC = () => {
               <h3>{t('contact.location')}</h3>
               <p>{t('contact.practice')}</p>
             </div>
-          </div>
+          </a>
         </address>
         <div className="contact-map">
           <div className="contact-map-container">

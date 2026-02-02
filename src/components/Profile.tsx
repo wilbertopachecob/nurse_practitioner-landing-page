@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { FaCalendarCheck, FaVideo, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
-import { CONTACT, IMAGES, SECTIONS } from '@/constants';
+import { CONTACT, IMAGES, MAPS, SECTIONS } from '@/constants';
 import SocialIcons from '@/components/SocialIcons';
 import './Profile.css';
 
@@ -23,10 +23,16 @@ const Profile: React.FC = () => {
           <header>
             <h1 className="profile-name">{t('profile.name')}</h1>
             <h2 className="profile-title">{t('profile.title')}</h2>
-            <address className="profile-location">
+            <a 
+              href={MAPS.linkUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="profile-location"
+              aria-label={`${t('about.location')} - View on Google Maps`}
+            >
               <FaMapMarkerAlt aria-hidden="true" />
               <span>{t('about.location')}</span>
-            </address>
+            </a>
           </header>
           <nav className="profile-cta" aria-label="Call to action">
             <a

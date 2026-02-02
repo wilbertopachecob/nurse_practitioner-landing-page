@@ -44,7 +44,7 @@ export const SOCIAL_MEDIA = {
 
 // Maps & URLs
 export const MAPS = {
-  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.1234567890123!2d-95.7890123456789!3d36.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzYsLTk1Ljc4!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus',
+  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3227.0353155873504!2d-95.8159775!3d36.019431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b68fec138063a9%3A0xd943730f976ad4fc!2sChoose%20Courage%20Counseling%20Services%2C%20PLLC!5e0!3m2!1sen!2sus!4v1769993515324!5m2!1sen!2sus',
   linkUrl: 'https://maps.app.goo.gl/7YCbg6GRQkDDahCXA?g_st=ic',
 } as const;
 
