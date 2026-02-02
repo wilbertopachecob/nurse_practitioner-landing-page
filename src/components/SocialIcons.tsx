@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { SOCIAL_MEDIA } from '@/constants';
 import './SocialIcons.css';
 
@@ -21,6 +21,14 @@ const SocialIcons = memo(() => {
         aria-label="Facebook"
       >
         <FaFacebook />
+      </a>
+      <a
+        href={SOCIAL_MEDIA.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        <FaLinkedin />
       </a>
     </div>
   );

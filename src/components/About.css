@@ -132,36 +132,6 @@
   font-weight: 600;
 }
 
-.location {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: var(--gradient-card);
-  border-radius: 12px;
-  font-size: 1.1rem;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-}
-
-.location:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-green);
-  transform: translateY(-2px);
-}
-
-.location svg {
-  font-size: 1.5rem;
-  color: var(--accent-green);
-  flex-shrink: 0;
-}
-
-.location span {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
 /* Visual separator between columns */
 .about-content::before {
   content: '';
@@ -205,9 +175,5 @@
   
   .education {
     padding: 1.5rem;
-  }
-  
-  .location {
-    padding: 1.25rem;
   }
 }

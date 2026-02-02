@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { FaCalendarCheck, FaVideo } from 'react-icons/fa';
+import { FaCalendarCheck, FaVideo, FaMapMarkerAlt } from 'react-icons/fa';
 import { CONTACT, IMAGES, SECTIONS } from '@/constants';
+import SocialIcons from '@/components/SocialIcons';
 import './Profile.css';
 
 const Profile: React.FC = () => {
@@ -24,6 +25,11 @@ const Profile: React.FC = () => {
             <h2 className="profile-title">{t('profile.title')}</h2>
           </header>
           <p className="profile-subtitle">{t('profile.subtitle')}</p>
+          <address className="location">
+            <FaMapMarkerAlt aria-hidden="true" />
+            <span>{t('about.location')}</span>
+          </address>
+          <SocialIcons />
           <nav className="profile-cta" aria-label="Call to action">
             <a
               href={CONTACT.phone.tel}

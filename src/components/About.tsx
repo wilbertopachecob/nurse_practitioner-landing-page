@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { FaGraduationCap, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
 import { SECTIONS } from '@/constants';
 import './About.css';
 
@@ -27,10 +27,6 @@ const About: React.FC = () => {
               <li>{t('about.education.adn')}</li>
             </ul>
           </section>
-          <address className="location">
-            <FaMapMarkerAlt aria-hidden="true" />
-            <span>{t('about.location')}</span>
-          </address>
         </div>
       </article>
     </section>

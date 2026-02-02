@@ -35,6 +35,7 @@ export const CONTACT = {
 export const SOCIAL_MEDIA = {
   instagram: 'https://www.instagram.com/mical_pmhmp_bc',
   facebook: 'https://www.facebook.com/share/1DDE8X49tk/?mibextid=wwXIfr',
+  linkedin: 'https://www.linkedin.com/in/mical-pacheco-2ba2393a8/',
 } as const;
 
 // Maps & URLs
