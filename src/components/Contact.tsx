@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaPhone, FaGlobe, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
-import { CONTACT, MAPS, SECTIONS } from '@/constants';
+import { FaPhone, FaGlobe, FaMapMarkerAlt, FaExternalLinkAlt, FaQrcode } from 'react-icons/fa';
+import { CONTACT, MAPS, SECTIONS, IMAGES } from '@/constants';
 import IconWrapper from '@/components/IconWrapper/IconWrapper';
 import '@/components/Contact.css';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
+  const [qrImageError, setQrImageError] = useState(false);
 
   return (
     <section className="contact section" id={SECTIONS.contact} aria-labelledby="contact-heading">
@@ -55,6 +57,39 @@ const Contact: React.FC = () => {
               <p>{t('contact.practice')}</p>
             </div>
           </a>
+          <div className="contact-item contact-qr-card">
+            <IconWrapper size="medium" className="icon-wrapper-rotate-right">
+              <FaQrcode />
+            </IconWrapper>
+            <div className="contact-content-wrapper">
+              <h3>{t('contact.businessCard')}</h3>
+              <p>{t('contact.businessCardDesc')}</p>
+              <div className="qr-code-container">
+                {qrImageError ? (
+                  <div className="qr-code-placeholder">
+                    <FaQrcode className="qr-placeholder-icon" />
+                    <p className="qr-placeholder-text">
+                      QR code image not found.
+                      <br />
+                      Please add your QR code image to:
+                      <br />
+                      <code className="qr-placeholder-code">public/images/business-card-qr.png</code>
+                    </p>
+                  </div>
+                ) : (
+                  <img
+                    src={IMAGES.businessCardQr}
+                    alt={t('contact.businessCard')}
+                    className="qr-code-image"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                    onError={() => setQrImageError(true)}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
         </address>
         <div className="contact-map">
           <div className="contact-map-container">

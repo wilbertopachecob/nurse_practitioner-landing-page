@@ -53,7 +53,9 @@
     "phone": "Phone",
     "website": "Website",
     "location": "Location",
-    "practice": "Choose Courage Counseling Services, PLLC, Oklahoma"
+    "practice": "Choose Courage Counseling Services, PLLC, Oklahoma",
+    "businessCard": "Business Card",
+    "businessCardDesc": "Scan to save contact information"
   },
   "footer": {
     "copyright": "© 2026 Mical Pacheco, PMHNP-BC. All rights reserved."

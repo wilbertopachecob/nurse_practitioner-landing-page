@@ -88,6 +88,78 @@
   line-height: 1.6;
 }
 
+.contact-qr-card .contact-item p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-qr-card {
+  cursor: default;
+}
+
+.contact-qr-card:hover {
+  transform: translateX(4px) rotateY(-1deg);
+}
+
+.qr-code-container {
+  margin-top: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+.qr-code-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+  margin: 0;
+}
+
+.qr-code-image:hover {
+  transform: scale(1.05);
+}
+
+.qr-code-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  text-align: center;
+  min-height: 200px;
+}
+
+.qr-placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+  color: var(--text-secondary);
+}
+
+.qr-placeholder-text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.qr-placeholder-code {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  font-family: 'Courier New', monospace;
+  color: var(--text-primary);
+}
+
 .contact-map {
   display: flex;
   flex-direction: column;
@@ -178,5 +250,13 @@
   
   .contact-map iframe {
     min-height: 300px;
+  }
+  
+  .qr-code-container {
+    padding: 0;
+  }
+  
+  .qr-code-image {
+    max-width: 150px;
   }
 }

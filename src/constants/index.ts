@@ -71,9 +71,10 @@ export const SECTIONS = {
   contact: 'contact',
 } as const;
 
-// Image Paths
+// Image Paths (query string busts cache when you deploy a new image)
 export const IMAGES = {
-  profile: '/images/MPFInalImages-4_Original.jpeg',
+  profile: '/images/MPFInalImages-4_Original.jpeg?v=2',
+  businessCardQr: '/images/bussiness_card_work.png',
 } as const;
 
 // SEO Meta Descriptions

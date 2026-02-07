@@ -331,22 +331,53 @@
     text-align: center;
   }
   
+  .profile-content {
+    align-items: center;
+  }
+  
+  .profile-content header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .profile-name {
     font-size: 2.75rem;
+    text-align: center;
+  }
+  
+  .profile-title {
+    text-align: center;
+  }
+  
+  .profile-location {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
   }
   
   .profile-cta {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   
   .profile-contact-group {
     grid-template-columns: 1fr;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   
   .profile-content .location,
   .profile-content .email-link {
     justify-content: center;
+  }
+  
+  .profile-content .social-icons {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .profile-image {
@@ -364,27 +395,58 @@
     gap: 2rem;
   }
   
+  .profile-content {
+    align-items: center;
+  }
+  
+  .profile-content header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
   .profile-name {
     font-size: 2.25rem;
+    text-align: center;
   }
   
   .profile-title {
     font-size: 1.25rem;
+    text-align: center;
   }
   
   .profile-location {
     font-size: 0.9rem;
     margin-bottom: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  
+  .profile-cta {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   
   .profile-contact-group {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   
   .profile-content .email-link {
     padding: 1rem;
     font-size: 0.9rem;
     width: 100%;
+    justify-content: center;
+  }
+  
+  .profile-content .social-icons {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .btn {
@@ -398,8 +460,48 @@
 }
 
 @media (max-width: 480px) {
+  .profile-content {
+    align-items: center;
+  }
+  
+  .profile-content header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
   .profile-name {
     font-size: 1.875rem;
+    text-align: center;
+  }
+  
+  .profile-title {
+    text-align: center;
+  }
+  
+  .profile-location {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  
+  .profile-cta {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-contact-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-content .social-icons {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .btn {
