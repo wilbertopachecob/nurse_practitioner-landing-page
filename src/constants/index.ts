@@ -73,7 +73,12 @@ export const SECTIONS = {
 
 // Image Paths (query string busts cache when you deploy a new image)
 export const IMAGES = {
-  profile: '/images/MPFInalImages-4_Original.jpeg?v=2',
+  profile: {
+    // Responsive image sources for different viewport sizes
+    src500: '/images/MPFInalImages-4_Original_500w.jpeg?v=2',
+    src1000: '/images/MPFInalImages-4_Original_1000w.jpeg?v=2',
+    src1200: '/images/MPFInalImages-4_Original.jpeg?v=2', // Fallback/desktop
+  },
   businessCardQr: '/images/bussiness_card_work.png',
 } as const;
 

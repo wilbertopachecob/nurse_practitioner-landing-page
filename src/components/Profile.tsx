@@ -11,15 +11,31 @@ const Profile: React.FC = () => {
     <section className="profile" id={SECTIONS.home} aria-label={t('profile.name')}>
       <div className="profile-container container">
         <div className="profile-image">
-          <img
-            src={IMAGES.profile}
-            alt={`${t('profile.name')} - ${t('profile.title')}`}
-            loading="eager"
-            fetchPriority="high"
-            width="500"
-            height="667"
-            sizes="(max-width: 768px) 100vw, (max-width: 968px) 400px, 500px"
-          />
+          <picture>
+            {/* Mobile: 100vw, serve 500w for 1x, 1000w for 2x */}
+            <source
+              media="(max-width: 768px)"
+              srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
+              sizes="100vw"
+            />
+            {/* Tablet: 400px, serve 500w for 1x, 1000w for 2x */}
+            <source
+              media="(max-width: 968px)"
+              srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
+              sizes="400px"
+            />
+            {/* Desktop: 500px, serve 500w for 1x, 1000w for 2x */}
+            <img
+              src={IMAGES.profile.src500}
+              srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w, ${IMAGES.profile.src1200} 1200w`}
+              sizes="(max-width: 768px) 100vw, (max-width: 968px) 400px, 500px"
+              alt={`${t('profile.name')} - ${t('profile.title')}`}
+              loading="eager"
+              fetchPriority="high"
+              width="500"
+              height="667"
+            />
+          </picture>
         </div>
         <article className="profile-content">
           <header>
