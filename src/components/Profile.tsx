@@ -15,8 +15,10 @@ const Profile: React.FC = () => {
             src={IMAGES.profile}
             alt={`${t('profile.name')} - ${t('profile.title')}`}
             loading="eager"
+            fetchPriority="high"
             width="500"
             height="667"
+            sizes="(max-width: 768px) 100vw, (max-width: 968px) 400px, 500px"
           />
         </div>
         <article className="profile-content">

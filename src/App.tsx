@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import ErrorBoundary from '@/components/ErrorBoundary';
@@ -8,12 +8,14 @@ import Profile from '@/components/Profile';
 import About from '@/components/About';
 import Services from '@/components/Services';
 import Credentials from '@/components/Credentials';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import '@/styles/global.css';
 import '@/styles/utilities.css';
 import '@/styles/patterns.css';
 import { initScrollAnimations } from '@/utils/animations';
+
+// Lazy load Contact component (contains heavy Google Maps iframe)
+const Contact = lazy(() => import('@/components/Contact'));
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -33,7 +35,9 @@ const App: React.FC = () => {
               <About />
               <Services />
               <Credentials />
-              <Contact />
+              <Suspense fallback={<div style={{ minHeight: '400px' }} aria-label="Loading contact section" />}>
+                <Contact />
+              </Suspense>
             </main>
             <Footer />
           </div>
