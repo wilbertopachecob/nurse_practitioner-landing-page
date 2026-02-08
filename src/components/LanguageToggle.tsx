@@ -6,7 +6,7 @@ import '@/components/LanguageToggle.css';
 
 const LanguageToggle: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   useEffect(() => {
     i18n.changeLanguage(language);
