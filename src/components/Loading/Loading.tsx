@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import type { SpinnerProps, SkeletonProps, ProgressBarProps, ShimmerProps } from '@/types';
 import '@/components/Loading/Loading.css';
 
@@ -6,8 +7,9 @@ import '@/components/Loading/Loading.css';
  * Loading spinner with customizable size and color
  */
 export const Spinner: React.FC<SpinnerProps> = ({ size = 'medium', className = '' }) => {
+  const { t } = useTranslation();
   return (
-    <div className={`spinner spinner-${size} ${className}`.trim()} aria-label="Loading" role="status">
+    <div className={`spinner spinner-${size} ${className}`.trim()} aria-label={t('aria.loading')} role="status">
       <span className="sr-only">Loading...</span>
     </div>
   );

@@ -121,7 +121,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-style: normal;
   margin-bottom: 1.5rem;
   text-decoration: none;
@@ -131,7 +131,7 @@
 }
 
 .profile-location:hover {
-  color: var(--text-accent);
+  color: var(--accent-primary);
 }
 
 .profile-location svg {

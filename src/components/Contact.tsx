@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaPhone, FaGlobe, FaMapMarkerAlt, FaExternalLinkAlt, FaQrcode } from 'react-icons/fa';
 import { CONTACT, MAPS, SECTIONS, IMAGES } from '@/constants';
@@ -8,6 +8,32 @@ import '@/components/Contact.css';
 const Contact: React.FC = () => {
   const { t } = useTranslation();
   const [qrImageError, setQrImageError] = useState(false);
+  const [shouldLoadMap, setShouldLoadMap] = useState(false);
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoadMap(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '100px', // Start loading 100px before the map enters viewport
+      }
+    );
+
+    if (mapContainerRef.current) {
+      observer.observe(mapContainerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <section className="contact section" id={SECTIONS.contact} aria-labelledby="contact-heading">
@@ -17,7 +43,7 @@ const Contact: React.FC = () => {
           <a 
             href={CONTACT.phone.tel}
             className="contact-item parent-hover"
-            aria-label={`Call ${CONTACT.phone.display}`}
+            aria-label={`${t('aria.call')} ${CONTACT.phone.display}`}
           >
             <IconWrapper size="medium" className="icon-wrapper-rotate-right">
               <FaPhone />
@@ -32,7 +58,7 @@ const Contact: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="contact-item parent-hover"
-            aria-label={`Visit ${CONTACT.website.display}`}
+            aria-label={`${t('aria.visit')} ${CONTACT.website.display}`}
           >
             <IconWrapper size="medium" className="icon-wrapper-rotate-right">
               <FaGlobe />
@@ -42,12 +68,12 @@ const Contact: React.FC = () => {
               <p>{CONTACT.website.display}</p>
             </div>
           </a>
-          <a 
+            <a 
             href={MAPS.linkUrl} 
             target="_blank" 
             rel="noopener noreferrer"
             className="contact-item parent-hover"
-            aria-label={`${t('contact.location')} - View on Google Maps`}
+            aria-label={`${t('contact.location')} - ${t('aria.viewOnGoogleMaps')}`}
           >
             <IconWrapper size="medium" className="icon-wrapper-rotate-right">
               <FaMapMarkerAlt />
@@ -92,18 +118,43 @@ const Contact: React.FC = () => {
           </div>
         </address>
         <div className="contact-map">
-          <div className="contact-map-container">
-            <iframe
-              src={MAPS.embedUrl}
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title={`${t('contact.location')} - ${CONTACT.practice.name}`}
-              aria-label={`Map showing location of ${CONTACT.practice.fullAddress}`}
-            />
+          <div className="contact-map-container" ref={mapContainerRef}>
+            {shouldLoadMap ? (
+              <iframe
+                src={MAPS.embedUrl}
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`${t('contact.location')} - ${CONTACT.practice.name}`}
+                aria-label={`${t('aria.mapShowingLocation')} ${CONTACT.practice.fullAddress}`}
+              />
+            ) : (
+              <div
+                style={{
+                  width: '100%',
+                  height: '400px',
+                  backgroundColor: 'var(--bg-secondary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '16px',
+                  border: '1px solid var(--border-color)',
+                }}
+                aria-label={t('aria.mapLoading')}
+              >
+                <FaMapMarkerAlt
+                  style={{
+                    fontSize: '3rem',
+                    color: 'var(--text-tertiary)',
+                    opacity: 0.5,
+                  }}
+                  aria-hidden="true"
+                />
+              </div>
+            )}
           </div>
           <p className="map-link">
             <a
@@ -111,7 +162,7 @@ const Contact: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('contact.location')} - View on Google Maps
+              {t('contact.location')} - {t('aria.viewOnGoogleMaps')}
               <FaExternalLinkAlt aria-hidden="true" />
             </a>
           </p>

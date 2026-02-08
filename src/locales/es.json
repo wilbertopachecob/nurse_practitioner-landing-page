@@ -71,6 +71,25 @@
     "credentials": "Credenciales y Certificaciones",
     "contact": "Contacto",
     "openMenu": "Abrir menú de navegación",
-    "closeMenu": "Cerrar menú de navegación"
+    "closeMenu": "Cerrar menú de navegación",
+    "mainNavigation": "Navegación principal",
+    "navigateTo": "Navegar a",
+    "section": "sección"
+  },
+  "aria": {
+    "loading": "Cargando",
+    "loadingContactSection": "Cargando sección de contacto",
+    "call": "Llamar",
+    "visit": "Visitar",
+    "viewOnGoogleMaps": "Ver en Google Maps",
+    "mapShowingLocation": "Mapa mostrando la ubicación de",
+    "mapLoading": "Cargando mapa",
+    "callToAction": "Llamada a la acción",
+    "switchTo": "Cambiar a",
+    "theme": "tema",
+    "light": "claro",
+    "dark": "oscuro",
+    "english": "Inglés",
+    "spanish": "Español"
   }
 }

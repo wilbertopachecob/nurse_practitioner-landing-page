@@ -6,7 +6,7 @@ import '@/components/LanguageToggle.css';
 
 const LanguageToggle: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   useEffect(() => {
     i18n.changeLanguage(language);
@@ -16,7 +16,7 @@ const LanguageToggle: React.FC = () => {
     <button
       className="language-toggle"
       onClick={toggleLanguage}
-      aria-label={`Switch to ${language === 'en' ? 'Spanish' : 'English'}`}
+      aria-label={`${t('aria.switchTo')} ${language === 'en' ? t('aria.spanish') : t('aria.english')}`}
     >
       <FaGlobe />
       <span>{language === 'en' ? 'EN' : 'ES'}</span>
