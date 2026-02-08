@@ -135,7 +135,7 @@ const Navigation: React.FC = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="navigation" aria-label="Main navigation">
+    <nav className="navigation" aria-label={t('nav.mainNavigation')}>
       <button
         className="menu-toggle"
         onClick={toggleMenu}
@@ -164,7 +164,7 @@ const Navigation: React.FC = () => {
                 className={`nav-link ${focusedIndex === index ? 'nav-link-focused' : ''}`}
                 role="menuitem"
                 tabIndex={isMobile ? (isMenuOpen ? 0 : -1) : 0}
-                aria-label={`Navigate to ${item.label} section`}
+                aria-label={`${t('nav.navigateTo')} ${item.label} ${t('nav.section')}`}
               >
                 {item.label}
               </a>

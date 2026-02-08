@@ -16,7 +16,7 @@ const LanguageToggle: React.FC = () => {
     <button
       className="language-toggle"
       onClick={toggleLanguage}
-      aria-label={`Switch to ${language === 'en' ? 'Spanish' : 'English'}`}
+      aria-label={`${t('aria.switchTo')} ${language === 'en' ? t('aria.spanish') : t('aria.english')}`}
     >
       <FaGlobe />
       <span>{language === 'en' ? 'EN' : 'ES'}</span>

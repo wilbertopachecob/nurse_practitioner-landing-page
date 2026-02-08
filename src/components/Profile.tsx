@@ -30,17 +30,17 @@ const Profile: React.FC = () => {
               target="_blank" 
               rel="noopener noreferrer"
               className="profile-location"
-              aria-label={`${t('about.location')} - View on Google Maps`}
+              aria-label={`${t('about.location')} - ${t('aria.viewOnGoogleMaps')}`}
             >
               <FaMapMarkerAlt aria-hidden="true" />
               <span>{t('about.location')}</span>
             </a>
           </header>
-          <nav className="profile-cta" aria-label="Call to action">
+          <nav className="profile-cta" aria-label={t('aria.callToAction')}>
             <a
               href={CONTACT.phone.tel}
               className="btn btn-primary"
-              aria-label={`${t('profile.cta')} - Call ${CONTACT.phone.display}`}
+              aria-label={`${t('profile.cta')} - ${t('aria.call')} ${CONTACT.phone.display}`}
             >
               <FaCalendarCheck aria-hidden="true" />
               {t('profile.cta')}
