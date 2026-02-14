@@ -17,21 +17,21 @@
 // Contact Information
 export const CONTACT = {
   phone: {
-    display: '(918) 940-7158',
-    tel: 'tel:+19189407158',
+    display: '(918) 417-2969 ',
+    tel: 'tel:+19184172969',
   },
   email: {
     address: 'mical.pacheco.pmhnp@gmail.com',
     mailto: 'mailto:mical.pacheco.pmhnp@gmail.com',
   },
   website: {
-    url: 'https://choosecouragecounseling.com',
-    display: 'choosecouragecounseling.com',
+    url: 'https://www.mindrejuvenation.net/',
+    display: 'www.mindrejuvenation.net',
   },
   practice: {
-    name: 'Choose Courage Counseling Services, PLLC',
-    location: 'Broken Arrow, Oklahoma',
-    fullAddress: 'Choose Courage Counseling Services, PLLC, Oklahoma',
+    name: 'Mind Rejuvenation',
+    location: 'Tulsa, Oklahoma',
+    fullAddress: 'Mind Rejuvenation, Oklahoma',
   },
 } as const;
 
@@ -44,8 +44,8 @@ export const SOCIAL_MEDIA = {
 
 // Maps & URLs
 export const MAPS = {
-  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3227.0353155873504!2d-95.8159775!3d36.019431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b68fec138063a9%3A0xd943730f976ad4fc!2sChoose%20Courage%20Counseling%20Services%2C%20PLLC!5e0!3m2!1sen!2sus!4v1769993515324!5m2!1sen!2sus',
-  linkUrl: 'https://maps.app.goo.gl/7YCbg6GRQkDDahCXA?g_st=ic',
+  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51607.65952950128!2d-95.99746227264406!3d36.057425945893876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6924227674b4b%3A0x4dfb54d1248fb6f5!2sMind%20Rejuvenation!5e0!3m2!1sen!2sus!4v1771086885120!5m2!1sen!2sus',
+  linkUrl: 'https://maps.app.goo.gl/Uc1sSzEgmiHjx3JH8',
 } as const;
 
 // Base URL for SEO

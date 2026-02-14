@@ -120,8 +120,7 @@ const Contact: React.FC = () => {
         <div className="contact-map">
           <div className="contact-map-container" ref={mapContainerRef}>
             {shouldLoadMap ? (
-              <iframe
-                src={MAPS.embedUrl}
+              <iframe src={MAPS.embedUrl} 
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
