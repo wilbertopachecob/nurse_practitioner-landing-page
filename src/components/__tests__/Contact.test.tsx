@@ -23,7 +23,7 @@ describe('Contact', () => {
       </TestWrapper>
     );
 
-    const phoneLink = screen.getByText(/918.*940.*7158/);
+    const phoneLink = screen.getByText(/918.*417.*2969/);
     expect(phoneLink).toBeInTheDocument();
   });
 
@@ -34,7 +34,7 @@ describe('Contact', () => {
       </TestWrapper>
     );
 
-    const websiteLink = screen.getByText(/choosecouragecounseling/i);
+    const websiteLink = screen.getByText(/mindrejuvenation/i);
     expect(websiteLink).toBeInTheDocument();
   });
 
@@ -45,7 +45,7 @@ describe('Contact', () => {
       </TestWrapper>
     );
 
-    const iframe = screen.getByTitle(/Location.*Choose Courage/i);
+    const iframe = screen.getByTitle(/Location.*Mind Rejuvenation/i);
     expect(iframe).toBeInTheDocument();
   });
 
@@ -56,9 +56,9 @@ describe('Contact', () => {
       </TestWrapper>
     );
 
-    // Check that IconWrapper components are rendered (3 contact items)
+    // Check that IconWrapper components are rendered (4 contact items)
     const iconWrappers = container.querySelectorAll('.icon-wrapper');
-    expect(iconWrappers.length).toBe(3);
+    expect(iconWrappers.length).toBe(4);
 
     // Verify they have the medium size class (as used in Contact component)
     iconWrappers.forEach((wrapper) => {
