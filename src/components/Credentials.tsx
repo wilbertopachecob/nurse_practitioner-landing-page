@@ -2,14 +2,16 @@ import { useTranslation } from 'react-i18next';
 import { FaCertificate, FaIdCard, FaHeartbeat, FaBriefcase, FaLanguage } from 'react-icons/fa';
 import { SECTIONS } from '@/constants';
 import IconWrapper from '@/components/IconWrapper/IconWrapper';
-import '@/components/Credentials.css';
 
 const Credentials: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <section className="credentials section" id={SECTIONS.credentials} aria-labelledby="credentials-heading">
-      <h2 id="credentials-heading">{t('credentials.title')}</h2>
+      <div className="section-head">
+        <span className="eyebrow">{t('credentials.eyebrow')}</span>
+        <h2 id="credentials-heading">{t('credentials.title')}</h2>
+      </div>
       <div className="credentials-grid">
         <article className="credential-item parent-hover">
           <IconWrapper size="medium" className="icon-wrapper-rotate-left">
@@ -17,6 +19,7 @@ const Credentials: React.FC = () => {
           </IconWrapper>
           <div className="credential-content">
             <h3>{t('credentials.certification')}</h3>
+            <p>{t('credentials.certificationSub')}</p>
           </div>
         </article>
         <article className="credential-item parent-hover">
@@ -25,6 +28,7 @@ const Credentials: React.FC = () => {
           </IconWrapper>
           <div className="credential-content">
             <h3>{t('credentials.license')}</h3>
+            <p>{t('credentials.licenseSub')}</p>
           </div>
         </article>
         <article className="credential-item parent-hover">
@@ -33,6 +37,7 @@ const Credentials: React.FC = () => {
           </IconWrapper>
           <div className="credential-content">
             <h3>{t('credentials.rn')}</h3>
+            <p>{t('credentials.rnSub')}</p>
           </div>
         </article>
         <article className="credential-item parent-hover">
@@ -41,6 +46,7 @@ const Credentials: React.FC = () => {
           </IconWrapper>
           <div className="credential-content">
             <h3>{t('credentials.certs')}</h3>
+            <p>{t('credentials.certsSub')}</p>
           </div>
         </article>
         <article className="credential-item parent-hover">
@@ -49,6 +55,7 @@ const Credentials: React.FC = () => {
           </IconWrapper>
           <div className="credential-content">
             <h3>{t('credentials.position')}</h3>
+            <p>{t('credentials.positionSub')}</p>
           </div>
         </article>
         <article className="credential-item parent-hover">
@@ -57,6 +64,7 @@ const Credentials: React.FC = () => {
           </IconWrapper>
           <div className="credential-content">
             <h3>{t('credentials.languages')}</h3>
+            <p>{t('credentials.languagesSub')}</p>
           </div>
         </article>
       </div>

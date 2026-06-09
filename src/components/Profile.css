@@ -1,511 +1,128 @@
-.profile {
-  padding: 5rem 2rem;
-  background: var(--gradient-bg);
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
+/* ============================================================
+   Profile.css — Hero section additions
+   brand.css owns the base .profile-* and .hero-meta styles.
+   This file adds portrait badge, hero-sub, hero-note, and
+   image-right / text-left responsive order.
+   ============================================================ */
+
+/* tablet: image above copy */
+@media (min-width: 641px) and (max-width: 968px) {
+  .profile-image {
+    order: -1;
+  }
+}
+
+/* descriptive sub-headline below h1 */
+.hero-sub {
+  font-size: var(--t-lead);
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: var(--s-2);
+  max-width: 44ch;
+}
+
+/* note text below CTAs */
+.hero-note {
+  margin-top: var(--s-4);
+  font-size: 0.88rem;
+  color: var(--text-tertiary);
+  text-wrap: pretty;
+}
+
+/* portrait image wrapper (needed for badge positioning) */
+.portrait-frame {
   position: relative;
-  overflow: hidden;
 }
 
-.profile::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(74, 144, 226, 0.05) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(107, 196, 166, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-/* Removed decorative element to prevent top-right discoloration */
-/* .profile::after {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: var(--gradient-primary);
-  opacity: 0.08;
-  top: 10%;
-  right: 5%;
-  filter: blur(40px);
-  animation: float 15s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-} */
-
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -20px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.profile-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.profile-image {
+.portrait-frame picture,
+.portrait-frame img {
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  position: relative;
-  animation: fadeInUp 0.8s ease-out;
+  border-radius: var(--r-xl);
+  display: block;
 }
 
-.profile-image::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background: var(--gradient-primary);
-  border-radius: 16px;
-  opacity: 0.1;
-  z-index: -1;
-}
-
-.profile-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: var(--shadow-xl), var(--shadow-colored);
+.portrait-frame img {
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.profile-image:hover img {
-  transform: scale(1.02);
-}
-
-.profile-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  animation: slideInRight 0.8s ease-out 0.2s both;
-}
-
-.profile-name {
-  font-size: 3.5rem;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
-
-.profile-title {
-  font-size: 1.5rem;
-  color: var(--accent-primary);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  letter-spacing: -0.01em;
-}
-
-.profile-location {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  color: var(--text-primary);
-  font-style: normal;
-  margin-bottom: 1.5rem;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: fit-content;
-}
-
-.profile-location:hover {
-  color: var(--accent-primary);
-}
-
-.profile-location svg {
-  font-size: 1.125rem;
-  color: var(--accent-green);
-  flex-shrink: 0;
-  transition: color 0.3s ease;
-}
-
-.profile-location:hover svg {
-  color: var(--accent-primary);
-}
-
-.profile-location span {
-  color: inherit;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.profile-contact-group {
-  display: flex;
-  margin-bottom: 1.5rem;
-}
-
-.profile-content .location {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem;
-  background: var(--gradient-card);
-  border-radius: 12px;
-  font-size: 1rem;
+  object-position: 50% 18%;
+  box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-  margin-bottom: 0;
-  font-style: normal;
 }
 
-.profile-content .location:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-green);
-  transform: translateY(-2px);
-}
-
-.profile-content .location svg {
-  font-size: 1.5rem;
-  color: var(--accent-green);
-  flex-shrink: 0;
-}
-
-.profile-content .location span {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-.profile-content .email-link {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem;
-  background: var(--gradient-card);
-  border-radius: 12px;
-  font-size: 1rem;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-  margin-bottom: 0;
-  text-decoration: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.profile-content .email-link:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-primary);
-  transform: translateY(-2px);
-}
-
-.profile-content .email-link svg {
-  font-size: 1.5rem;
-  color: var(--accent-primary);
-  flex-shrink: 0;
-}
-
-.profile-content .email-link span {
-  color: var(--text-accent);
-  font-weight: 500;
-}
-
-.profile-content .email-link:hover span {
-  color: var(--text-accent-hover);
-}
-
-.profile-content .social-icons {
-  margin-bottom: 0;
-}
-
-.profile-cta {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.btn > * {
-  position: relative;
-  z-index: 2;
-}
-
-.btn::before {
-  content: '';
+/* floating credential badge */
+.portrait-badge {
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.btn:hover::before {
-  left: 100%;
-}
-
-.btn-primary {
-  background: var(--gradient-primary);
-  color: white;
-  box-shadow: var(--shadow-md), var(--shadow-colored);
-}
-
-.btn-primary:hover {
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg), var(--shadow-colored);
-  filter: brightness(1.05);
-}
-
-.btn-primary:active {
-  transform: translateY(-1px);
-}
-
-.btn-primary:hover::before {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-}
-
-.btn-primary:active {
-  transform: translateY(-1px);
-}
-
-.telehealth-badge {
-  display: inline-flex;
+  bottom: 1.75rem;
+  left: -1.25rem;
+  display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.875rem 1.75rem;
-  background: var(--gradient-card);
-  color: var(--text-primary);
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
+  gap: var(--s-3);
+  background: var(--surface);
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  border-radius: var(--r-lg);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-md);
 }
 
-.telehealth-badge svg {
-  font-size: 1.25rem;
-  color: var(--accent-green);
+.portrait-badge b {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
 }
 
-.telehealth-badge:hover {
-  border-color: var(--accent-green);
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
+.portrait-badge small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  margin-top: 1px;
+}
+
+.portrait-badge-ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--sage-tint);
+  color: var(--sage-deep);
+  display: grid;
+  place-items: center;
+  flex: none;
+  font-size: 1rem;
 }
 
 @media (max-width: 968px) {
-  .profile-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-  
-  .profile-content {
-    align-items: center;
-  }
-  
-  .profile-content header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .profile-name {
-    font-size: 2.75rem;
-    text-align: center;
-  }
-  
-  .profile-title {
-    text-align: center;
-  }
-  
-  .profile-location {
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-  }
-  
-  .profile-cta {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile-contact-group {
-    grid-template-columns: 1fr;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .profile-content .location,
-  .profile-content .email-link {
-    justify-content: center;
-  }
-  
-  .profile-content .social-icons {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .profile-image {
-    max-width: 400px;
+  .portrait-badge {
+    left: 0.5rem;
+    bottom: 1rem;
   }
 }
 
-@media (max-width: 768px) {
-  .profile {
-    padding: 3rem 1rem;
-    min-height: auto;
+@media (max-width: 640px) {
+  .portrait-badge {
+    display: none;
   }
-  
-  .profile-container {
-    gap: 2rem;
-  }
-  
+
+  /* copy first — headline + CTA visible above the fold */
   .profile-content {
-    align-items: center;
+    order: -1;
   }
-  
-  .profile-content header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .profile-name {
-    font-size: 2.25rem;
-    text-align: center;
-  }
-  
-  .profile-title {
-    font-size: 1.25rem;
-    text-align: center;
-  }
-  
-  .profile-location {
-    font-size: 0.9rem;
-    margin-bottom: 1.25rem;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-  }
-  
-  .profile-cta {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile-contact-group {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .profile-content .email-link {
-    padding: 1rem;
-    font-size: 0.9rem;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .profile-content .social-icons {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .btn {
-    padding: 0.875rem 2rem;
-    font-size: 1rem;
-  }
-  
+
   .profile-image {
+    order: 0;
+    max-width: min(72vw, 280px);
+    margin-inline: auto;
+  }
+
+  .portrait-frame img {
+    max-height: min(38dvh, 300px);
+    width: auto;
     max-width: 100%;
+    margin-inline: auto;
   }
 }
 
-@media (max-width: 480px) {
-  .profile-content {
-    align-items: center;
-  }
-  
-  .profile-content header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .profile-name {
-    font-size: 1.875rem;
-    text-align: center;
-  }
-  
-  .profile-title {
-    text-align: center;
-  }
-  
-  .profile-location {
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-  }
-  
-  .profile-cta {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile-contact-group {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .profile-content .social-icons {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
+/* Ensure the "See how it works" button has right cursor */
+.profile-cta button {
+  cursor: pointer;
 }

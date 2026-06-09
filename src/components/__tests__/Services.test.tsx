@@ -23,7 +23,10 @@ describe('Services', () => {
       </TestWrapper>
     );
 
-    const title = screen.getByText('Services');
+    const title = screen.getByRole('heading', {
+      level: 2,
+      name: 'Comprehensive psychiatric care, across the lifespan.',
+    });
     expect(title).toBeInTheDocument();
   });
 

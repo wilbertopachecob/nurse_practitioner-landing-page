@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { FaCalendarCheck, FaVideo, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
-import { CONTACT, IMAGES, MAPS, SECTIONS } from '@/constants';
-import SocialIcons from '@/components/SocialIcons';
+import { FaCalendarCheck, FaVideo, FaMapMarkerAlt, FaLanguage, FaShieldAlt } from 'react-icons/fa';
+import { IMAGES, MAPS, SECTIONS } from '@/constants';
+import { scrollToSection } from '@/utils/scroll';
 import '@/components/Profile.css';
 
 const Profile: React.FC = () => {
@@ -10,40 +10,23 @@ const Profile: React.FC = () => {
   return (
     <section className="profile" id={SECTIONS.home} aria-label={t('profile.name')}>
       <div className="profile-container container">
-        <div className="profile-image">
-          <picture>
-            {/* Mobile: 100vw, serve 500w for 1x, 1000w for 2x */}
-            <source
-              media="(max-width: 768px)"
-              srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
-              sizes="100vw"
-            />
-            {/* Tablet: 400px, serve 500w for 1x, 1000w for 2x */}
-            <source
-              media="(max-width: 968px)"
-              srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
-              sizes="400px"
-            />
-            {/* Desktop: 500px, serve 500w for 1x, 1000w for 2x */}
-            <img
-              src={IMAGES.profile.src500}
-              srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w, ${IMAGES.profile.src1200} 1200w`}
-              sizes="(max-width: 768px) 100vw, (max-width: 968px) 400px, 500px"
-              alt={`${t('profile.name')} - ${t('profile.title')}`}
-              loading="eager"
-              fetchPriority="high"
-              width="500"
-              height="667"
-            />
-          </picture>
-        </div>
-        <article className="profile-content">
-          <header>
-            <h1 className="profile-name">{t('profile.name')}</h1>
-            <h2 className="profile-title">{t('profile.title')}</h2>
-            <a 
-              href={MAPS.linkUrl} 
-              target="_blank" 
+        {/* Text column — left */}
+        <article className="profile-content" data-reveal>
+          <span className="profile-pill">
+            <span className="dot" aria-hidden="true" />
+            {t('hero.pill')}
+          </span>
+
+          <h1 className="profile-name">
+            {t('hero.h1a')} <em>{t('hero.h1b')}</em>
+          </h1>
+
+          <p className="hero-sub">{t('hero.sub')}</p>
+
+          <div className="hero-meta">
+            <a
+              href={MAPS.linkUrl}
+              target="_blank"
               rel="noopener noreferrer"
               className="profile-location"
               aria-label={`${t('about.location')} - ${t('aria.viewOnGoogleMaps')}`}
@@ -51,29 +34,68 @@ const Profile: React.FC = () => {
               <FaMapMarkerAlt aria-hidden="true" />
               <span>{t('about.location')}</span>
             </a>
-          </header>
+            <span><FaLanguage aria-hidden="true" />{t('hero.bilingual')}</span>
+            <span><FaVideo aria-hidden="true" />{t('hero.tele')}</span>
+          </div>
+
           <nav className="profile-cta" aria-label={t('aria.callToAction')}>
-            <a
-              href={CONTACT.phone.tel}
+            <button
+              type="button"
               className="btn btn-primary"
-              aria-label={`${t('profile.cta')} - ${t('aria.call')} ${CONTACT.phone.display}`}
+              onClick={() => scrollToSection(SECTIONS.contact)}
+              aria-label={t('cta.book')}
             >
               <FaCalendarCheck aria-hidden="true" />
-              {t('profile.cta')}
-            </a>
-            <span className="telehealth-badge" aria-label={t('profile.telehealth')}>
-              <FaVideo aria-hidden="true" />
-              {t('profile.telehealth')}
-            </span>
+              {t('cta.book')}
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => scrollToSection(SECTIONS.approach)}
+            >
+              {t('cta.how')}
+            </button>
           </nav>
-          <div className="profile-contact-group">
-            <a href={CONTACT.email.mailto} className="location email-link">
-              <FaEnvelope aria-hidden="true" />
-              <span>{CONTACT.email.address}</span>
-            </a>
-          </div>
-          <SocialIcons />
+
+          <p className="hero-note">{t('hero.note')}</p>
         </article>
+
+        {/* Image column — right */}
+        <div className="profile-image" data-reveal>
+          <div className="portrait-frame">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
+                sizes="100vw"
+              />
+              <source
+                media="(max-width: 968px)"
+                srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
+                sizes="400px"
+              />
+              <img
+                src={IMAGES.profile.src500}
+                srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w, ${IMAGES.profile.src1200} 1200w`}
+                sizes="(max-width: 768px) 100vw, (max-width: 968px) 400px, 500px"
+                alt={`${t('profile.name')} - ${t('profile.title')}`}
+                loading="eager"
+                fetchPriority="high"
+                width="500"
+                height="667"
+              />
+            </picture>
+            <div className="portrait-badge" aria-label={t('badge.title')}>
+              <span className="portrait-badge-ico" aria-hidden="true">
+                <FaShieldAlt />
+              </span>
+              <span>
+                <b>{t('badge.title')}</b>
+                <small>{t('badge.sub')}</small>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

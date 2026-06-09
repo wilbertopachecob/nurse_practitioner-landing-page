@@ -1,129 +1,187 @@
+/* ============================================================
+   themes.css — WARM, LIGHT-FIRST REDESIGN
+   Drop-in replacement for src/styles/themes.css.
+
+   Keeps every variable NAME the existing components already use,
+   but reassigns them to a calm, warm OKLCH palette. This single
+   file reskins About / Services / Credentials / Contact / Footer
+   with no component changes. New brand tokens (serif font, sage,
+   clay, type scale, spacing, radius) are added at the bottom and
+   used by brand.css + the new components.
+
+   Note: light is now the DEFAULT. The dark theme is retained as a
+   warm, low-glare option (no more cold navy).
+   ============================================================ */
+
+:root,
 :root[data-theme="light"] {
-  /* Background Colors */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F8FAFC;
-  --bg-accent: #F1F5F9;
-  --bg-gradient-start: #F8FAFC;
-  --bg-gradient-end: #E8F2F8;
-  
-  /* Text Colors */
-  --text-primary: #1E293B;
-  --text-secondary: #64748B;
-  --text-tertiary: #94A3B8;
-  --text-accent: #4A90E2;
-  --text-accent-hover: #357ABD;
-  
-  /* Accent Colors - Healthcare Blues & Greens */
-  --accent-primary: #4A90E2;
-  --accent-primary-hover: #357ABD;
-  --accent-secondary: #5BA3D0;
-  --accent-green: #6BC4A6;
-  --accent-green-hover: #5BA892;
-  --accent-light-blue: #7FD3B8;
-  
-  /* Enhanced Healthcare Color Palette */
-  --accent-teal: #4ECDC4;
-  --accent-teal-hover: #3AB8B0;
-  --accent-trust-blue: #2E86AB;
-  --accent-trust-blue-hover: #256A8A;
-  --accent-success: #10B981;
-  --accent-success-hover: #059669;
-  --accent-purple: #8B5CF6;
-  --accent-purple-hover: #7C3AED;
-  --accent-coral: #F87171;
-  --accent-coral-hover: #EF4444;
-  
-  /* Pattern Overlay Colors */
-  --pattern-overlay-light: rgba(74, 144, 226, 0.03);
-  --pattern-overlay-medium: rgba(74, 144, 226, 0.05);
-  --pattern-overlay-dark: rgba(74, 144, 226, 0.08);
-  
-  /* Border & Divider */
-  --border-color: #E2E8F0;
-  --border-color-hover: #CBD5E1;
-  --divider: #E2E8F0;
-  
-  /* Shadows - Multiple layers for depth */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-colored: 0 10px 25px -5px rgba(74, 144, 226, 0.2);
-  
-  /* Gradient Definitions */
-  --gradient-primary: linear-gradient(135deg, #4A90E2 0%, #5BA3D0 100%);
-  --gradient-secondary: linear-gradient(135deg, #6BC4A6 0%, #7FD3B8 100%);
-  --gradient-bg: linear-gradient(180deg, #F8FAFC 0%, #E8F2F8 100%);
-  --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-  --gradient-teal: linear-gradient(135deg, #4ECDC4 0%, #3AB8B0 100%);
-  --gradient-trust: linear-gradient(135deg, #2E86AB 0%, #256A8A 100%);
-  --gradient-success: linear-gradient(135deg, #10B981 0%, #059669 100%);
-  --gradient-purple: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
-  --gradient-coral: linear-gradient(135deg, #F87171 0%, #EF4444 100%);
+  /* ---- Backgrounds (warm paper) ---- */
+  --bg-primary:   oklch(0.985 0.006 90);
+  --bg-secondary: oklch(0.965 0.008 85);
+  --bg-accent:    oklch(0.940 0.010 85);
+  --bg-gradient-start: oklch(0.985 0.006 90);
+  --bg-gradient-end:   oklch(0.962 0.012 95);
+
+  /* ---- Text (ink) ---- */
+  --text-primary:      oklch(0.27 0.012 240);
+  --text-secondary:    oklch(0.44 0.012 245);
+  --text-tertiary:     oklch(0.58 0.012 245);
+  --text-accent:       oklch(0.42 0.05 158);
+  --text-accent-hover: oklch(0.36 0.045 158);
+
+  /* ---- Accents — disciplined two-hue system (sage + clay) ----
+     All legacy accent slots are mapped onto sage/clay so any
+     component that still references them stays on-palette. */
+  --accent-primary:        oklch(0.42 0.05 158);   /* sage-deep (buttons)   */
+  --accent-primary-hover:  oklch(0.36 0.045 158);
+  --accent-secondary:      oklch(0.55 0.052 158);  /* sage                  */
+  --accent-green:          oklch(0.55 0.052 158);
+  --accent-green-hover:    oklch(0.42 0.05 158);
+  --accent-light-blue:     oklch(0.62 0.072 45);   /* clay                  */
+
+  --accent-teal:           oklch(0.55 0.052 158);
+  --accent-teal-hover:     oklch(0.42 0.05 158);
+  --accent-trust-blue:     oklch(0.42 0.05 158);
+  --accent-trust-blue-hover: oklch(0.36 0.045 158);
+  --accent-success:        oklch(0.52 0.06 150);
+  --accent-success-hover:  oklch(0.44 0.055 150);
+  --accent-purple:         oklch(0.55 0.052 158);
+  --accent-purple-hover:   oklch(0.42 0.05 158);
+  --accent-coral:          oklch(0.62 0.072 45);   /* clay                  */
+  --accent-coral-hover:    oklch(0.52 0.07 45);
+
+  /* ---- Pattern overlays (very subtle sage) ---- */
+  --pattern-overlay-light:  oklch(0.55 0.052 158 / 0.03);
+  --pattern-overlay-medium: oklch(0.55 0.052 158 / 0.05);
+  --pattern-overlay-dark:   oklch(0.55 0.052 158 / 0.08);
+
+  /* ---- Borders ---- */
+  --border-color:       oklch(0.91 0.008 85);
+  --border-color-hover: oklch(0.85 0.01 85);
+  --divider:            oklch(0.91 0.008 85);
+
+  /* ---- Shadows (soft, warm, low-contrast) ---- */
+  --shadow-sm: 0 1px 2px oklch(0.4 0.03 90 / 0.05);
+  --shadow:    0 4px 10px oklch(0.4 0.03 90 / 0.06), 0 2px 4px oklch(0.4 0.03 90 / 0.05);
+  --shadow-md: 0 12px 28px oklch(0.4 0.03 90 / 0.09), 0 4px 10px oklch(0.4 0.03 90 / 0.05);
+  --shadow-lg: 0 24px 60px oklch(0.4 0.03 90 / 0.12), 0 8px 18px oklch(0.4 0.03 90 / 0.06);
+  --shadow-xl: 0 32px 80px oklch(0.4 0.03 90 / 0.16);
+  --shadow-colored: 0 12px 28px oklch(0.42 0.05 158 / 0.16);
+
+  /* ---- Gradients (kept subtle + on-palette) ---- */
+  --gradient-primary:   linear-gradient(135deg, oklch(0.46 0.05 158) 0%, oklch(0.40 0.05 158) 100%);
+  --gradient-secondary: linear-gradient(135deg, oklch(0.55 0.052 158) 0%, oklch(0.62 0.072 45) 100%);
+  --gradient-bg:        linear-gradient(180deg, oklch(0.985 0.006 90) 0%, oklch(0.962 0.012 95) 100%);
+  --gradient-card:      linear-gradient(135deg, oklch(1 0 0) 0%, oklch(0.985 0.006 90) 100%);
+  --gradient-teal:      linear-gradient(135deg, oklch(0.55 0.052 158) 0%, oklch(0.42 0.05 158) 100%);
+  --gradient-trust:     linear-gradient(135deg, oklch(0.46 0.05 158) 0%, oklch(0.36 0.045 158) 100%);
+  --gradient-success:   linear-gradient(135deg, oklch(0.55 0.052 158) 0%, oklch(0.44 0.055 150) 100%);
+  --gradient-purple:    linear-gradient(135deg, oklch(0.55 0.052 158) 0%, oklch(0.42 0.05 158) 100%);
+  --gradient-coral:     linear-gradient(135deg, oklch(0.62 0.072 45) 0%, oklch(0.52 0.07 45) 100%);
 }
 
 :root[data-theme="dark"] {
-  /* Background Colors */
-  --bg-primary: #0F172A;
-  --bg-secondary: #1E293B;
-  --bg-accent: #334155;
-  --bg-gradient-start: #0F172A;
-  --bg-gradient-end: #1E293B;
-  
-  /* Text Colors */
-  --text-primary: #F1F5F9;
-  --text-secondary: #CBD5E1;
-  --text-tertiary: #94A3B8;
-  --text-accent: #7AB8D9;
-  --text-accent-hover: #9BC9E8;
-  
-  /* Accent Colors - Adjusted for dark mode */
-  --accent-primary: #7AB8D9;
-  --accent-primary-hover: #9BC9E8;
-  --accent-secondary: #8BC5E0;
-  --accent-green: #6BC4A6;
-  --accent-green-hover: #7FD3B8;
-  --accent-light-blue: #7FD3B8;
-  
-  /* Enhanced Healthcare Color Palette - Dark Mode */
-  --accent-teal: #5EEAD4;
-  --accent-teal-hover: #2DD4BF;
-  --accent-trust-blue: #60A5FA;
-  --accent-trust-blue-hover: #3B82F6;
-  --accent-success: #34D399;
-  --accent-success-hover: #10B981;
-  --accent-purple: #A78BFA;
-  --accent-purple-hover: #8B5CF6;
-  --accent-coral: #FCA5A5;
-  --accent-coral-hover: #F87171;
-  
-  /* Pattern Overlay Colors - Dark Mode */
-  --pattern-overlay-light: rgba(122, 184, 217, 0.05);
-  --pattern-overlay-medium: rgba(122, 184, 217, 0.08);
-  --pattern-overlay-dark: rgba(122, 184, 217, 0.12);
-  
-  /* Border & Divider */
-  --border-color: #334155;
-  --border-color-hover: #475569;
-  --divider: #334155;
-  
-  /* Shadows - Enhanced for dark mode */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-  --shadow-colored: 0 10px 25px -5px rgba(122, 184, 217, 0.3);
-  
-  /* Gradient Definitions */
-  --gradient-primary: linear-gradient(135deg, #7AB8D9 0%, #8BC5E0 100%);
-  --gradient-secondary: linear-gradient(135deg, #6BC4A6 0%, #7FD3B8 100%);
-  --gradient-bg: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
-  --gradient-card: linear-gradient(135deg, #1E293B 0%, #334155 100%);
-  --gradient-teal: linear-gradient(135deg, #5EEAD4 0%, #2DD4BF 100%);
-  --gradient-trust: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
-  --gradient-success: linear-gradient(135deg, #34D399 0%, #10B981 100%);
-  --gradient-purple: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
-  --gradient-coral: linear-gradient(135deg, #FCA5A5 0%, #F87171 100%);
+  /* Warm dark (no cold navy). Optional alternative mode. */
+  --bg-primary:   oklch(0.20 0.012 90);
+  --bg-secondary: oklch(0.25 0.012 90);
+  --bg-accent:    oklch(0.30 0.014 90);
+  --bg-gradient-start: oklch(0.20 0.012 90);
+  --bg-gradient-end:   oklch(0.25 0.012 90);
+
+  --text-primary:      oklch(0.95 0.008 90);
+  --text-secondary:    oklch(0.80 0.01 90);
+  --text-tertiary:     oklch(0.66 0.01 90);
+  --text-accent:       oklch(0.78 0.06 158);
+  --text-accent-hover: oklch(0.86 0.06 158);
+
+  --accent-primary:        oklch(0.70 0.07 158);
+  --accent-primary-hover:  oklch(0.78 0.07 158);
+  --accent-secondary:      oklch(0.66 0.06 158);
+  --accent-green:          oklch(0.70 0.07 158);
+  --accent-green-hover:    oklch(0.78 0.07 158);
+  --accent-light-blue:     oklch(0.72 0.08 45);
+  --accent-teal:           oklch(0.70 0.07 158);
+  --accent-teal-hover:     oklch(0.78 0.07 158);
+  --accent-trust-blue:     oklch(0.70 0.07 158);
+  --accent-trust-blue-hover: oklch(0.78 0.07 158);
+  --accent-success:        oklch(0.70 0.07 150);
+  --accent-success-hover:  oklch(0.78 0.07 150);
+  --accent-purple:         oklch(0.70 0.07 158);
+  --accent-purple-hover:   oklch(0.78 0.07 158);
+  --accent-coral:          oklch(0.72 0.08 45);
+  --accent-coral-hover:    oklch(0.80 0.08 45);
+
+  --pattern-overlay-light:  oklch(0.70 0.07 158 / 0.05);
+  --pattern-overlay-medium: oklch(0.70 0.07 158 / 0.08);
+  --pattern-overlay-dark:   oklch(0.70 0.07 158 / 0.12);
+
+  --border-color:       oklch(0.36 0.012 90);
+  --border-color-hover: oklch(0.46 0.014 90);
+  --divider:            oklch(0.36 0.012 90);
+
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.3);
+  --shadow:    0 4px 10px oklch(0 0 0 / 0.4), 0 2px 4px oklch(0 0 0 / 0.3);
+  --shadow-md: 0 12px 28px oklch(0 0 0 / 0.45), 0 4px 10px oklch(0 0 0 / 0.3);
+  --shadow-lg: 0 24px 60px oklch(0 0 0 / 0.5), 0 8px 18px oklch(0 0 0 / 0.4);
+  --shadow-xl: 0 32px 80px oklch(0 0 0 / 0.6);
+  --shadow-colored: 0 12px 28px oklch(0.70 0.07 158 / 0.25);
+
+  --gradient-primary:   linear-gradient(135deg, oklch(0.70 0.07 158) 0%, oklch(0.62 0.06 158) 100%);
+  --gradient-secondary: linear-gradient(135deg, oklch(0.70 0.07 158) 0%, oklch(0.72 0.08 45) 100%);
+  --gradient-bg:        linear-gradient(180deg, oklch(0.20 0.012 90) 0%, oklch(0.25 0.012 90) 100%);
+  --gradient-card:      linear-gradient(135deg, oklch(0.25 0.012 90) 0%, oklch(0.30 0.014 90) 100%);
+  --gradient-teal:      linear-gradient(135deg, oklch(0.70 0.07 158) 0%, oklch(0.62 0.06 158) 100%);
+  --gradient-trust:     linear-gradient(135deg, oklch(0.70 0.07 158) 0%, oklch(0.62 0.06 158) 100%);
+  --gradient-success:   linear-gradient(135deg, oklch(0.70 0.07 150) 0%, oklch(0.62 0.06 150) 100%);
+  --gradient-purple:    linear-gradient(135deg, oklch(0.70 0.07 158) 0%, oklch(0.62 0.06 158) 100%);
+  --gradient-coral:     linear-gradient(135deg, oklch(0.72 0.08 45) 0%, oklch(0.64 0.07 45) 100%);
+}
+
+/* ============================================================
+   NEW BRAND TOKENS (used by brand.css + new components)
+   ============================================================ */
+:root {
+  /* Fonts — load <link> in index.html (see INTEGRATION.md) */
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans:  "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Brand hues (matched lightness/chroma, hue-only difference) */
+  --sage:        oklch(0.55 0.052 158);
+  --sage-deep:   oklch(0.42 0.05 158);
+  --sage-press:  oklch(0.36 0.045 158);
+  --sage-tint:   oklch(0.94 0.028 158);
+  --sage-tint-2: oklch(0.90 0.04 158);
+
+  --clay:        oklch(0.62 0.072 45);
+  --clay-deep:   oklch(0.47 0.07 45);
+  --clay-tint:   oklch(0.94 0.03 50);
+
+  --surface:      oklch(1 0 0);
+  --surface-soft: oklch(0.975 0.006 90);
+
+  --focus:       oklch(0.55 0.13 250);
+  --alert-tint:  oklch(0.95 0.03 55);
+  --alert-line:  oklch(0.80 0.06 55);
+  --alert-ink:   oklch(0.45 0.10 45);
+
+  /* Fluid type scale (1.22 ratio) */
+  --t-display: clamp(2.6rem, 1.6rem + 4.4vw, 4.4rem);
+  --t-h1:      clamp(2.1rem, 1.5rem + 2.6vw, 3.1rem);
+  --t-h2:      clamp(1.7rem, 1.3rem + 1.7vw, 2.35rem);
+  --t-h3:      clamp(1.28rem, 1.1rem + 0.7vw, 1.55rem);
+  --t-lead:    clamp(1.12rem, 1.04rem + 0.35vw, 1.3rem);
+  --t-eyebrow: 0.78rem;
+  --ls-eyebrow: 0.14em;
+  --ls-tight: -0.02em;
+
+  /* Spacing (4px base) */
+  --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.5rem;
+  --s-6: 2rem; --s-7: 2.5rem; --s-8: 3rem; --s-9: 4rem; --s-10: 5rem;
+  --section-y: clamp(4rem, 2.5rem + 6vw, 7.5rem);
+
+  /* Radius */
+  --r-sm: 8px; --r-md: 14px; --r-lg: 22px; --r-xl: 32px; --r-pill: 999px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }

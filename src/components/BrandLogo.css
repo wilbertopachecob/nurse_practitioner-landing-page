@@ -1,0 +1,89 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  min-height: 44px;
+}
+
+.brand-logo:hover {
+  color: inherit;
+  opacity: 1;
+}
+
+.brand-logo:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--sage-deep);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.brand-name {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.brand-credentials {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Footer variant — light text on dark band */
+.brand-logo--footer .brand-mark {
+  background: oklch(0.52 0.05 158);
+}
+
+.brand-logo--footer .brand-name {
+  color: #fff;
+}
+
+.brand-logo--footer .brand-credentials {
+  color: oklch(0.78 0.01 240);
+}
+
+.brand-logo--footer:hover .brand-name {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .brand-logo--header .brand-text {
+    display: none;
+  }
+
+  .brand-logo--header .brand-mark {
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+}

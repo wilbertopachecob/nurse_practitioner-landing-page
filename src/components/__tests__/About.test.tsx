@@ -23,7 +23,10 @@ describe('About', () => {
       </TestWrapper>
     );
 
-    const title = screen.getByText('About Me');
+    const title = screen.getByRole('heading', {
+      level: 2,
+      name: 'Care should feel like being truly listened to.',
+    });
     expect(title).toBeInTheDocument();
   });
 

@@ -1,55 +1,47 @@
 .language-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.75rem 1.25rem;
-  background: var(--gradient-card);
-  color: var(--text-primary);
+  padding: 3px;
+  background: var(--surface-soft);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  border-radius: var(--r-pill);
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+:root[data-theme="dark"] .language-toggle {
+  background: var(--bg-secondary);
+}
+
+.language-toggle .language-toggle-option {
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  min-width: 44px;
   min-height: 44px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  line-height: 1;
 }
 
-.language-toggle::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--gradient-primary);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.language-toggle .language-toggle-option:hover:not(.is-active) {
+  background: var(--sage-tint);
+  color: var(--sage-deep);
 }
 
-.language-toggle:hover {
-  border-color: var(--accent-primary);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-  color: var(--text-primary);
+.language-toggle .language-toggle-option.is-active {
+  background: var(--sage-deep);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
 }
 
-.language-toggle:hover::before {
-  opacity: 0.1;
-}
-
-.language-toggle:active {
-  transform: translateY(0);
-}
-
-.language-toggle svg {
-  font-size: 1.125rem;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.language-toggle:hover svg {
-  transform: rotate(15deg) scale(1.1);
+.language-toggle .language-toggle-option:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }

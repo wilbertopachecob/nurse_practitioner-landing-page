@@ -29,8 +29,8 @@ describe('LanguageToggle', () => {
       </TestWrapper>
     );
 
-    const button = screen.getByRole('button');
-    expect(button).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /switch to english/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /switch to spanish/i })).toBeInTheDocument();
   });
 
   it('displays current language', () => {
@@ -40,8 +40,9 @@ describe('LanguageToggle', () => {
       </TestWrapper>
     );
 
-    const button = screen.getByRole('button');
-    expect(button).toHaveTextContent('EN');
+    const englishButton = screen.getByRole('button', { name: /switch to english/i });
+    expect(englishButton).toHaveTextContent('EN');
+    expect(englishButton).toHaveAttribute('aria-pressed', 'true');
   });
 
   it('has accessible label', () => {
@@ -51,8 +52,8 @@ describe('LanguageToggle', () => {
       </TestWrapper>
     );
 
-    const button = screen.getByLabelText(/switch to/i);
-    expect(button).toBeInTheDocument();
+    const group = screen.getByRole('group', { name: /language/i });
+    expect(group).toBeInTheDocument();
   });
 
   it('should have no accessibility violations', async () => {

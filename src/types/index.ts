@@ -87,6 +87,7 @@ export interface ThemeContextType {
 export interface LanguageContextType {
   language: 'en' | 'es';
   toggleLanguage: () => void;
+  setLanguage: (language: Language) => void;
 }
 
 // Utility Function Types
@@ -107,4 +108,4 @@ export type Theme = 'light' | 'dark';
 export type Language = 'en' | 'es';
 export type IconSize = 'small' | 'medium' | 'large';
 export type BadgeVariant = 'primary' | 'success' | 'info' | 'warning' | 'teal' | 'purple' | 'coral' | 'trust';
-export type SectionId = 'home' | 'about' | 'services' | 'credentials' | 'contact';
+export type SectionId = 'home' | 'about' | 'approach' | 'services' | 'credentials' | 'contact';

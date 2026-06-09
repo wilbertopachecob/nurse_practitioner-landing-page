@@ -19,13 +19,13 @@
 - Services: Psychiatric Medication Management
 - Key Message: "Accepting New Patients"
 - Call to Action: "BOOK AN APPOINTMENT - TELEHEALTH AVAILABLE"
-- Contact: Phone (918) 940-7158, Website: choosecouragecounseling.com
+- Contact: Phone (918) 417-2969, Website: mindrejuvenation.net
 
 **From Resume (notes.md):**
 - Full Name: Mical Pacheco, MSN, APRN, PMHNP-BC
 - Location: Broken Arrow, Oklahoma
 - Bilingual: English / Spanish
-- Current Position: Psychiatric Mental Health Nurse Practitioner at Choose Courage Counseling Services, PLLC (2026–Present)
+- Current Position: Psychiatric Mental Health Nurse Practitioner at Mind Rejuvenation (2026–Present)
 - Education: 
   - Master of Science in Nursing – Psychiatric Mental Health Nurse Practitioner, Saint Louis University (December 2025, GPA: 3.72)
   - Bachelor of Science in Nursing, Northeastern State University (2021)
@@ -41,7 +41,7 @@
 - Facebook: https://www.facebook.com/share/1DDE8X49tk/?mibextid=wwXIfr
 
 **Location:**
-- Choose Courage Counseling Services: https://maps.app.goo.gl/7YCbg6GRQkDDahCXA?g_st=ic
+- Mind Rejuvenation: https://maps.app.goo.gl/Uc1sSzEgmiHjx3JH8
 - Include embedded Google Map in Contact section
 
 **Profile Picture Selection:**
@@ -84,13 +84,13 @@ Create the following sections based on typical PMHNP landing pages and extracted
    - APRN – Oklahoma License
    - RN Compact License
    - BLS, ACLS, CPR Certified
-   - Current Position: Choose Courage Counseling Services, PLLC (2026–Present)
+   - Current Position: Mind Rejuvenation (2026–Present)
    - Languages: English (Native), Spanish (Clinical/Conversational)
 
 5. **Contact Section**
-   - Phone: (918) 940-7158
-   - Website: choosecouragecounseling.com
-   - Location: Choose Courage Counseling Services, PLLC, Oklahoma
+   - Phone: (918) 417-2969
+   - Website: mindrejuvenation.net
+   - Location: Mind Rejuvenation, Oklahoma
    - Embedded Google Map showing practice location
    - Contact form (optional)
    - Office hours (if available)
@@ -260,8 +260,8 @@ nurse_practitioner-landing-page/
 ## Additional Implementation Details
 
 **Google Map Integration:**
-- Use Google Maps Embed API or iframe to display Choose Courage Counseling Services location
-- Map link: https://maps.app.goo.gl/7YCbg6GRQkDDahCXA?g_st=ic
+- Use Google Maps Embed API or iframe to display Mind Rejuvenation location
+- Map link: https://maps.app.goo.gl/Uc1sSzEgmiHjx3JH8
 - Extract address from map or use iframe embed code
 - Ensure map is responsive and works on mobile devices
 
@@ -305,7 +305,7 @@ nurse_practitioner-landing-page/
 - [ ] Create Services section with Psychiatric Medication Management (with i18n)
 - [ ] Create Credentials/Certifications section (with i18n)
 - [ ] Create Contact section with phone, website, and embedded Google Map (with i18n)
-- [ ] Integrate embedded Google Map for Choose Courage Counseling Services location
+- [ ] Integrate embedded Google Map for Mind Rejuvenation location
 - [ ] Create Footer with social media icons (Instagram and Facebook with actual links) (with i18n)
 - [ ] Add professional icons throughout sections (medical, appointment, etc.)
 - [ ] Implement light theme styling (white background design with professional styling)
