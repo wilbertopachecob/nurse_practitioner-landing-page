@@ -1,27 +1,41 @@
 .language-toggle {
   display: flex;
-  align-items: center;  
-  padding: 0.2rem;
-  background: var(--surface);
+  align-items: center;
+  padding: 3px;
+  background: var(--surface, #fff);
   border: 1px solid var(--border-color);
   border-radius: var(--r-pill);
-  min-height: 40px;
+  gap: 2px;
 }
 
 .language-toggle-option {
   border: 0;
   background: transparent;
   color: var(--text-secondary);
-  min-width: 34px;
+  min-width: 36px;
   min-height: 34px;
   border-radius: var(--r-pill);
+  font-family: var(--font-sans);
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 0 0.6rem;
+  letter-spacing: 0.05em;
+  padding: 0 0.7rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+
+.language-toggle-option:hover:not(.is-active) {
+  background: var(--sage-tint);
+  color: var(--sage-deep);
 }
 
 .language-toggle-option.is-active {
   background: var(--sage-deep);
   color: #fff;
+}
+
+.language-toggle-option:focus-visible {
+  outline: 2px solid var(--focus, var(--sage));
+  outline-offset: 2px;
 }

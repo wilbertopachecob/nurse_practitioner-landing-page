@@ -9,7 +9,20 @@
   "hero": {
     "pill": "Aceptando nuevos pacientes · Telemedicina disponible",
     "promise": "Atención de salud mental que se siente segura, humana y sin prisas.",
-    "bilingual": "Inglés y Español"
+    "h1a": "Atención de salud mental que se siente",
+    "h1b": "segura, humana y sin prisas.",
+    "sub": "Soy Mical Pacheco, enfermera practicante psiquiátrica certificada que ofrece evaluación cuidadosa, manejo de medicamentos y atención bilingüe a lo largo de la vida.",
+    "note": "Llamada introductoria gratuita de 15 minutos · La mayoría de las dudas resueltas antes de tu primera visita.",
+    "bilingual": "Inglés y Español",
+    "tele": "Telemedicina segura"
+  },
+  "badge": {
+    "title": "Certificada",
+    "sub": "PMHNP-BC · ANCC"
+  },
+  "cta": {
+    "book": "Reservar cita",
+    "how": "Ver cómo funciona"
   },
   "trust": {
     "aria": "Credenciales de un vistazo",

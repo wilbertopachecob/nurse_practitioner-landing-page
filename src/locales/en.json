@@ -9,7 +9,20 @@
   "hero": {
     "pill": "Accepting new patients · Telehealth available",
     "promise": "Mental health care that feels safe, human, and unhurried.",
-    "bilingual": "English & Spanish"
+    "h1a": "Mental health care that feels",
+    "h1b": "safe, human, and unhurried.",
+    "sub": "I'm Mical Pacheco, a board-certified psychiatric nurse practitioner offering thoughtful evaluation, medication management, and bilingual care across the lifespan.",
+    "note": "Free 15-minute introductory call · Most questions answered before your first visit.",
+    "bilingual": "English & Spanish",
+    "tele": "Secure telehealth"
+  },
+  "badge": {
+    "title": "Board-certified",
+    "sub": "PMHNP-BC · ANCC"
+  },
+  "cta": {
+    "book": "Book Appointment",
+    "how": "See how it works"
   },
   "trust": {
     "aria": "Credentials at a glance",
