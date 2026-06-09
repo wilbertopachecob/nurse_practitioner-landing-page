@@ -275,13 +275,19 @@ p { text-wrap: pretty; }
 @media (max-width: 968px) { .services-grid, .credentials-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .services-grid, .credentials-grid { grid-template-columns: 1fr; } }
 
-.contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem,1rem+2vw,3rem); align-items: start; }
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-5);
+  align-items: stretch;
+}
 .contact-card,
 .book-card {
   background: var(--surface);
   border: 1px solid var(--border-color);
   border-radius: var(--r-lg);
   padding: var(--s-7);
+  height: 100%;
 }
 .contact-card h3 {
   font-family: var(--font-serif);
@@ -326,6 +332,8 @@ p { text-wrap: pretty; }
   font-size: 0.98rem;
 }
 .book-card {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(140deg, var(--sage-deep), var(--sage-press));
   color: #fff;
 }
@@ -365,7 +373,8 @@ p { text-wrap: pretty; }
   gap: var(--s-2);
   align-items: center;
   font-size: 0.9rem;
-  margin-top: var(--s-4);
+  margin-top: auto;
+  padding-top: var(--s-4);
 }
 .book-note svg {
   width: 16px;
