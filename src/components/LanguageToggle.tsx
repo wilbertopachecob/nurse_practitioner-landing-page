@@ -1,11 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
-import { FaGlobe } from 'react-icons/fa';
 import '@/components/LanguageToggle.css';
 
 const LanguageToggle: React.FC = () => {
-  const { language, toggleLanguage } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const { i18n, t } = useTranslation();
 
   useEffect(() => {
@@ -13,14 +12,26 @@ const LanguageToggle: React.FC = () => {
   }, [language, i18n]);
 
   return (
-    <button
-      className="language-toggle"
-      onClick={toggleLanguage}
-      aria-label={`${t('aria.switchTo')} ${language === 'en' ? t('aria.spanish') : t('aria.english')}`}
-    >
-      <FaGlobe />
-      <span>{language === 'en' ? 'EN' : 'ES'}</span>
-    </button>
+    <div className="language-toggle" role="group" aria-label={t('header.language')}>
+      <button
+        type="button"
+        className={`language-toggle-option ${language === 'en' ? 'is-active' : ''}`}
+        onClick={() => setLanguage('en')}
+        aria-pressed={language === 'en'}
+        aria-label={`${t('aria.switchTo')} ${t('aria.english')}`}
+      >
+        EN
+      </button>
+      <button
+        type="button"
+        className={`language-toggle-option ${language === 'es' ? 'is-active' : ''}`}
+        onClick={() => setLanguage('es')}
+        aria-pressed={language === 'es'}
+        aria-label={`${t('aria.switchTo')} ${t('aria.spanish')}`}
+      >
+        ES
+      </button>
+    </div>
   );
 };
 

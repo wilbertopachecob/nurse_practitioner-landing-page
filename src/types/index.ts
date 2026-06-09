@@ -87,6 +87,7 @@ export interface ThemeContextType {
 export interface LanguageContextType {
   language: 'en' | 'es';
   toggleLanguage: () => void;
+  setLanguage: (language: Language) => void;
 }
 
 // Utility Function Types

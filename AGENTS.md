@@ -112,7 +112,7 @@ to "start a conversation" (call / book / message). Don't add competing actions.
 
 - Name / title: **Mical Pacheco, MSN, APRN, PMHNP-BC** — Psychiatric Mental Health NP.
 - Location: Broken Arrow / Tulsa area, Oklahoma. Telehealth statewide.
-- Current position: **Choose Courage Counseling Services, PLLC** (2026–present).
+- Current position: **Mind Rejuvenation** (2026–present).
 - Phone: **(918) 417-2969** · Email: `mical.pacheco.pmhnp@gmail.com`.
 - Credentials: PMHNP-BC (ANCC), APRN (Oklahoma), RN compact license, BLS/ACLS/CPR.
 - Languages: English (native), Spanish (clinical/conversational).

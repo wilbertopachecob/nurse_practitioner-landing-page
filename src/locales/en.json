@@ -23,7 +23,8 @@
     "expR": "in nursing"
   },
   "about": {
-    "title": "About Me",
+    "eyebrow": "About Mical",
+    "title": "Care should feel like being truly listened to.",
     "paragraph1": "Welcome. I am really glad you are here.",
     "paragraph2": "Looking for mental health care can feel overwhelming, and just being here is an important first step. My practice is grounded in compassion, respect, and genuine connection. I believe care should feel safe, supportive, and tailored to you as a whole person.",
     "paragraph3": "As a board certified Psychiatric Mental Health Nurse Practitioner, I take time to listen and understand your story, your concerns, and your goals. Whether you are feeling anxious, overwhelmed, stuck, or simply seeking clarity and support, you do not have to navigate it alone.",
@@ -37,6 +38,7 @@
     "location": "Broken Arrow, Oklahoma"
   },
   "how": {
+    "eyebrow": "Getting started",
     "title": "A calm, clear path to your first appointment.",
     "subtitle": "No confusing intake mazes. Three simple steps from reaching out to ongoing support.",
     "s1t": "Reach out",
@@ -47,7 +49,9 @@
     "s3p": "Regular follow-ups for medication management and support — in person or via secure telehealth, on your schedule."
   },
   "services": {
-    "title": "Services",
+    "eyebrow": "What I offer",
+    "title": "Comprehensive psychiatric care, across the lifespan.",
+    "subtitle": "Evidence-based, trauma-informed services tailored to where you are right now.",
     "evaluations": "Comprehensive Psychiatric Evaluations",
     "evaluationsDesc": "DSM-5-TR diagnostic assessments across the lifespan",
     "medication": "Medication Management",
@@ -66,20 +70,31 @@
     "coordinationDesc": "Collaboration with therapists and other healthcare providers"
   },
   "credentials": {
-    "title": "Credentials & Certifications",
-    "certification": "PMHNP-BC (ANCC Board Certification)",
-    "license": "APRN – Oklahoma License",
+    "eyebrow": "Credentials",
+    "title": "Qualified, licensed, and accountable.",
+    "certification": "PMHNP-BC",
+    "certificationSub": "ANCC board certification",
+    "license": "APRN",
+    "licenseSub": "Oklahoma license",
     "rn": "RN Compact License",
-    "certs": "BLS, ACLS, CPR Certified",
-    "position": "Current Position: Choose Courage Counseling (2026–Present)",
-    "languages": "Languages: English (Native), Spanish (Clinical/Conversational)"
+    "rnSub": "Multistate practice",
+    "certs": "BLS · ACLS · CPR",
+    "certsSub": "Current certifications",
+    "position": "Mind Rejuvenation",
+    "positionSub": "Current role · 2026-present",
+    "languages": "English & Spanish",
+    "languagesSub": "Native / clinical fluency"
   },
   "contact": {
-    "title": "Contact",
+    "eyebrow": "Get in touch",
+    "title": "Ready when you are.",
+    "subtitle": "Reach out with any questions, or book your first appointment. I'd be honored to support you.",
+    "detailsTitle": "Contact details",
     "phone": "Phone",
+    "email": "Email",
     "website": "Website",
     "location": "Location",
-    "practice": "Choose Courage Counseling, Oklahoma",
+    "practice": "Mind Rejuvenation, Oklahoma",
     "businessCard": "Business Card",
     "businessCardDesc": "Scan to save contact information"
   },
@@ -87,7 +102,18 @@
     "title": "In a crisis? Help is available right now.",
     "body": "If you or someone you know is in immediate danger, call <b>911</b>. For free, confidential 24/7 support, call or text <b>988</b> (Suicide & Crisis Lifeline). This website is not for medical emergencies."
   },
+  "book": {
+    "eyebrow": "Your first visit",
+    "title": "It would be an honor to support you.",
+    "subtitle": "Choose the option that feels easiest. New patients are welcome, and a free 15-minute call is the simplest place to begin.",
+    "call": "Call (918) 417-2969",
+    "email": "Send a message",
+    "note": "Typical response within one business day."
+  },
   "footer": {
+    "blurb": "Compassionate, bilingual psychiatric care for adults across the lifespan. Broken Arrow, Oklahoma and telehealth statewide.",
+    "explore": "Explore",
+    "contact": "Contact",
     "copyright": "© 2026 Mical Pacheco, PMHNP-BC. All rights reserved."
   },
   "header": {
@@ -99,7 +125,7 @@
     "about": "About Me",
     "approach": "How it works",
     "services": "Services",
-    "credentials": "Credentials & Certifications",
+    "credentials": "Credentials",
     "contact": "Contact",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",

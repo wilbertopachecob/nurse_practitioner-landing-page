@@ -37,7 +37,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps): React.JSX
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

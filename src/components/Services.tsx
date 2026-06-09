@@ -11,7 +11,6 @@ import {
 } from 'react-icons/fa';
 import { SECTIONS } from '@/constants';
 import IconWrapper from '@/components/IconWrapper/IconWrapper';
-import '@/components/Services.css';
 
 interface Service {
   icon: React.ReactElement;
@@ -66,8 +65,12 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section className="services section pattern-dots" id={SECTIONS.services} aria-labelledby="services-heading">
-      <h2 id="services-heading">{t('services.title')}</h2>
+    <section className="services section" id={SECTIONS.services} aria-labelledby="services-heading">
+      <div className="section-head">
+        <span className="eyebrow">{t('services.eyebrow')}</span>
+        <h2 id="services-heading">{t('services.title')}</h2>
+        <p>{t('services.subtitle')}</p>
+      </div>
       <div className="services-grid">
         {services.map((service, index) => (
           <article key={index} className="service-card parent-hover">

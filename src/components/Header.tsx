@@ -2,9 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FaCalendarCheck } from 'react-icons/fa';
 import Navigation from '@/components/Navigation';
 import LanguageToggle from '@/components/LanguageToggle';
-import ThemeToggle from '@/components/ThemeToggle';
 import { CONTACT } from '@/constants';
-import '@/components/Header.css';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
@@ -15,7 +13,6 @@ const Header: React.FC = () => {
         <Navigation />
         <div className="header-controls">
           <LanguageToggle />
-          <ThemeToggle />
           <a
             href={CONTACT.phone.tel}
             className="header-cta"

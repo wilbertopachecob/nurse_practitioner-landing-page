@@ -11,8 +11,11 @@ const HowItWorks: React.FC = () => {
 
   return (
     <section className="how section" id="approach" aria-labelledby="how-heading">
-      <h2 id="how-heading">{t('how.title')}</h2>
-      <p className="how-intro">{t('how.subtitle')}</p>
+      <div className="section-head">
+        <span className="eyebrow">{t('how.eyebrow')}</span>
+        <h2 id="how-heading">{t('how.title')}</h2>
+        <p className="how-intro">{t('how.subtitle')}</p>
+      </div>
       <div className="how-grid">
         {steps.map((s) => (
           <article className="how-step" key={s.n}>
