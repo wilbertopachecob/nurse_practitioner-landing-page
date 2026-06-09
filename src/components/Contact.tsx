@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaCalendarCheck } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGlobe, FaCalendarCheck } from 'react-icons/fa';
 import { CONTACT, MAPS, SECTIONS } from '@/constants';
 
 const Contact: React.FC = () => {
@@ -45,6 +45,20 @@ const Contact: React.FC = () => {
                 <span>
                   <small>{t('contact.location')}</small>
                   <b>{t('contact.practice')}</b>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={CONTACT.website.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${t('aria.visit')} ${CONTACT.website.display}`}
+              >
+                <span className="ico" aria-hidden="true"><FaGlobe /></span>
+                <span>
+                  <small>{t('contact.website')}</small>
+                  <b>{CONTACT.website.display}</b>
                 </span>
               </a>
             </li>
