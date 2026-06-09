@@ -5,8 +5,8 @@
    image-right / text-left responsive order.
    ============================================================ */
 
-/* image column: on mobile come first (above copy) */
-@media (max-width: 968px) {
+/* tablet: image above copy */
+@media (min-width: 641px) and (max-width: 968px) {
   .profile-image {
     order: -1;
   }
@@ -101,6 +101,24 @@
 @media (max-width: 640px) {
   .portrait-badge {
     display: none;
+  }
+
+  /* copy first — headline + CTA visible above the fold */
+  .profile-content {
+    order: -1;
+  }
+
+  .profile-image {
+    order: 0;
+    max-width: min(72vw, 280px);
+    margin-inline: auto;
+  }
+
+  .portrait-frame img {
+    max-height: min(38dvh, 300px);
+    width: auto;
+    max-width: 100%;
+    margin-inline: auto;
   }
 }
 
