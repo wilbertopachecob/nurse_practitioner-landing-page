@@ -66,6 +66,7 @@ export const DESIGN = {
 export const SECTIONS = {
   home: 'home',
   about: 'about',
+  approach: 'approach',
   services: 'services',
   credentials: 'credentials',
   contact: 'contact',

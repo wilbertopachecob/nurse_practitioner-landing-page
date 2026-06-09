@@ -6,6 +6,22 @@
     "cta": "Reservar Cita",
     "telehealth": "Telemedicina Disponible"
   },
+  "hero": {
+    "pill": "Aceptando nuevos pacientes · Telemedicina disponible",
+    "promise": "Atención de salud mental que se siente segura, humana y sin prisas.",
+    "bilingual": "Inglés y Español"
+  },
+  "trust": {
+    "aria": "Credenciales de un vistazo",
+    "certB": "ANCC",
+    "certR": "certificada",
+    "biB": "Bilingüe",
+    "biR": "Inglés / Español",
+    "teleB": "Telemedicina",
+    "teleR": "compatible con HIPAA",
+    "expB": "10+ años",
+    "expR": "en enfermería"
+  },
   "about": {
     "title": "Acerca de Mí",
     "paragraph1": "Bienvenido. Me alegra mucho que estés aquí.",
@@ -19,6 +35,16 @@
       "adn": "Grado Asociado en Enfermería, Colegio Comunitario de Tulsa (2016)"
     },
     "location": "Broken Arrow, Oklahoma"
+  },
+  "how": {
+    "title": "Un camino claro y tranquilo hacia tu primera cita.",
+    "subtitle": "Sin laberintos de admisión confusos. Tres pasos sencillos, desde el primer contacto hasta el apoyo continuo.",
+    "s1t": "Comunícate",
+    "s1p": "Reserva en línea o llama para una conversación introductoria gratuita de 15 minutos — sin presión, solo para ver si encajamos bien.",
+    "s2t": "Primera evaluación",
+    "s2p": "Una evaluación psiquiátrica completa y sin prisas donde exploramos tu historia, tus metas y un plan hecho a tu medida.",
+    "s3t": "Atención continua",
+    "s3p": "Seguimientos regulares para el manejo de medicamentos y apoyo — en persona o por telemedicina segura, en tu horario."
   },
   "services": {
     "title": "Servicios",
@@ -45,7 +71,7 @@
     "license": "APRN – Licencia de Oklahoma",
     "rn": "Licencia Compacta de RN",
     "certs": "Certificada en BLS, ACLS, RCP",
-    "position": "Posición Actual: Mind Rejuvenation (2026–Presente)",
+    "position": "Posición Actual: Choose Courage Counseling (2026–Presente)",
     "languages": "Idiomas: Inglés (Nativo), Español (Clínico/Conversacional)"
   },
   "contact": {
@@ -53,9 +79,13 @@
     "phone": "Teléfono",
     "website": "Sitio Web",
     "location": "Ubicación",
-    "practice": "Mind Rejuvenation, Oklahoma",
+    "practice": "Choose Courage Counseling, Oklahoma",
     "businessCard": "Tarjeta de Presentación",
     "businessCardDesc": "Escanee para guardar información de contacto"
+  },
+  "crisis": {
+    "title": "¿En crisis? Hay ayuda disponible ahora mismo.",
+    "body": "Si tú o alguien que conoces está en peligro inmediato, llama al <b>911</b>. Para apoyo gratuito y confidencial 24/7, llama o envía un mensaje al <b>988</b> (Línea de Crisis y Suicidio). Este sitio no es para emergencias médicas."
   },
   "footer": {
     "copyright": "© 2026 Mical Pacheco, PMHNP-BC. Todos los derechos reservados."
@@ -67,6 +97,7 @@
   "nav": {
     "home": "Inicio",
     "about": "Acerca de Mí",
+    "approach": "Cómo funciona",
     "services": "Servicios",
     "credentials": "Credenciales y Certificaciones",
     "contact": "Contacto",

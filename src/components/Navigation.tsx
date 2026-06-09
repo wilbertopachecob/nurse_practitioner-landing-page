@@ -31,6 +31,7 @@ const Navigation: React.FC = () => {
   const navItems: NavItem[] = [
     { id: SECTIONS.home, label: t('nav.home') },
     { id: SECTIONS.about, label: t('nav.about') },
+    { id: SECTIONS.approach, label: t('nav.approach') },
     { id: SECTIONS.services, label: t('nav.services') },
     { id: SECTIONS.credentials, label: t('nav.credentials') },
     { id: SECTIONS.contact, label: t('nav.contact') },

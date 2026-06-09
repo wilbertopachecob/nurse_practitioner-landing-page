@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { FaCalendarCheck, FaVideo, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import { FaCalendarCheck, FaVideo, FaMapMarkerAlt, FaEnvelope, FaLanguage } from 'react-icons/fa';
 import { CONTACT, IMAGES, MAPS, SECTIONS } from '@/constants';
 import SocialIcons from '@/components/SocialIcons';
 import '@/components/Profile.css';
@@ -12,19 +12,16 @@ const Profile: React.FC = () => {
       <div className="profile-container container">
         <div className="profile-image">
           <picture>
-            {/* Mobile: 100vw, serve 500w for 1x, 1000w for 2x */}
             <source
               media="(max-width: 768px)"
               srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
               sizes="100vw"
             />
-            {/* Tablet: 400px, serve 500w for 1x, 1000w for 2x */}
             <source
               media="(max-width: 968px)"
               srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w`}
               sizes="400px"
             />
-            {/* Desktop: 500px, serve 500w for 1x, 1000w for 2x */}
             <img
               src={IMAGES.profile.src500}
               srcSet={`${IMAGES.profile.src500} 500w, ${IMAGES.profile.src1000} 1000w, ${IMAGES.profile.src1200} 1200w`}
@@ -38,12 +35,22 @@ const Profile: React.FC = () => {
           </picture>
         </div>
         <article className="profile-content">
+          <span className="profile-pill">
+            <span className="dot" aria-hidden="true" />
+            {t('hero.pill')}
+          </span>
+
           <header>
             <h1 className="profile-name">{t('profile.name')}</h1>
             <h2 className="profile-title">{t('profile.title')}</h2>
-            <a 
-              href={MAPS.linkUrl} 
-              target="_blank" 
+          </header>
+
+          <p className="profile-promise">{t('hero.promise')}</p>
+
+          <div className="hero-meta">
+            <a
+              href={MAPS.linkUrl}
+              target="_blank"
               rel="noopener noreferrer"
               className="profile-location"
               aria-label={`${t('about.location')} - ${t('aria.viewOnGoogleMaps')}`}
@@ -51,7 +58,10 @@ const Profile: React.FC = () => {
               <FaMapMarkerAlt aria-hidden="true" />
               <span>{t('about.location')}</span>
             </a>
-          </header>
+            <span><FaLanguage aria-hidden="true" />{t('hero.bilingual')}</span>
+            <span><FaVideo aria-hidden="true" />{t('profile.telehealth')}</span>
+          </div>
+
           <nav className="profile-cta" aria-label={t('aria.callToAction')}>
             <a
               href={CONTACT.phone.tel}

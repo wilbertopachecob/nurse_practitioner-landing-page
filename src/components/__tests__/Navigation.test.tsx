@@ -28,6 +28,7 @@ describe('Navigation', () => {
     document.body.innerHTML = `
       <div id="home"></div>
       <div id="about"></div>
+      <div id="approach"></div>
       <div id="services"></div>
       <div id="credentials"></div>
       <div id="contact"></div>
@@ -55,6 +56,7 @@ describe('Navigation', () => {
 
     expect(screen.getByText(/home/i)).toBeInTheDocument();
     expect(screen.getByText(/about me/i)).toBeInTheDocument();
+    expect(screen.getByText(/how it works/i)).toBeInTheDocument();
     expect(screen.getByText(/services/i)).toBeInTheDocument();
     expect(screen.getByText(/credentials/i)).toBeInTheDocument();
     expect(screen.getByText(/contact/i)).toBeInTheDocument();

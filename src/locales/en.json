@@ -6,6 +6,22 @@
     "cta": "Book Appointment",
     "telehealth": "Telehealth Available"
   },
+  "hero": {
+    "pill": "Accepting new patients · Telehealth available",
+    "promise": "Mental health care that feels safe, human, and unhurried.",
+    "bilingual": "English & Spanish"
+  },
+  "trust": {
+    "aria": "Credentials at a glance",
+    "certB": "ANCC",
+    "certR": "board-certified",
+    "biB": "Bilingual",
+    "biR": "English / Spanish",
+    "teleB": "HIPAA-compliant",
+    "teleR": "telehealth",
+    "expB": "10+ years",
+    "expR": "in nursing"
+  },
   "about": {
     "title": "About Me",
     "paragraph1": "Welcome. I am really glad you are here.",
@@ -19,6 +35,16 @@
       "adn": "Associate Degree in Nursing, Tulsa Community College (2016)"
     },
     "location": "Broken Arrow, Oklahoma"
+  },
+  "how": {
+    "title": "A calm, clear path to your first appointment.",
+    "subtitle": "No confusing intake mazes. Three simple steps from reaching out to ongoing support.",
+    "s1t": "Reach out",
+    "s1p": "Book online or call for a free 15-minute introductory conversation — no pressure, just a chance to see if we're a good fit.",
+    "s2t": "First evaluation",
+    "s2p": "A thorough, unhurried psychiatric evaluation where we explore your history, goals, and a plan built around you.",
+    "s3t": "Ongoing care",
+    "s3p": "Regular follow-ups for medication management and support — in person or via secure telehealth, on your schedule."
   },
   "services": {
     "title": "Services",
@@ -45,7 +71,7 @@
     "license": "APRN – Oklahoma License",
     "rn": "RN Compact License",
     "certs": "BLS, ACLS, CPR Certified",
-    "position": "Current Position: Mind Rejuvenation (2026–Present)",
+    "position": "Current Position: Choose Courage Counseling (2026–Present)",
     "languages": "Languages: English (Native), Spanish (Clinical/Conversational)"
   },
   "contact": {
@@ -53,9 +79,13 @@
     "phone": "Phone",
     "website": "Website",
     "location": "Location",
-    "practice": "Mind Rejuvenation, Oklahoma",
+    "practice": "Choose Courage Counseling, Oklahoma",
     "businessCard": "Business Card",
     "businessCardDesc": "Scan to save contact information"
+  },
+  "crisis": {
+    "title": "In a crisis? Help is available right now.",
+    "body": "If you or someone you know is in immediate danger, call <b>911</b>. For free, confidential 24/7 support, call or text <b>988</b> (Suicide & Crisis Lifeline). This website is not for medical emergencies."
   },
   "footer": {
     "copyright": "© 2026 Mical Pacheco, PMHNP-BC. All rights reserved."
@@ -67,6 +97,7 @@
   "nav": {
     "home": "Home",
     "about": "About Me",
+    "approach": "How it works",
     "services": "Services",
     "credentials": "Credentials & Certifications",
     "contact": "Contact",

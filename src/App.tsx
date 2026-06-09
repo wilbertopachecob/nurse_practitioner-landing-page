@@ -6,13 +6,17 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import Header from '@/components/Header';
 import SEO from '@/components/SEO';
 import Profile from '@/components/Profile';
+import TrustStrip from '@/components/TrustStrip';
 import About from '@/components/About';
+import HowItWorks from '@/components/HowItWorks';
 import Services from '@/components/Services';
 import Credentials from '@/components/Credentials';
+import CrisisNotice from '@/components/CrisisNotice';
 import Footer from '@/components/Footer';
 import '@/styles/global.css';
 import '@/styles/utilities.css';
 import '@/styles/patterns.css';
+import '@/styles/brand.css';
 import { initScrollAnimations } from '@/utils/animations';
 
 // Lazy load Contact component (contains heavy Google Maps iframe)
@@ -22,7 +26,6 @@ const AppContent: React.FC = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // Initialize scroll-triggered animations
     initScrollAnimations();
   }, []);
 
@@ -33,12 +36,15 @@ const AppContent: React.FC = () => {
         <Header />
         <main>
           <Profile />
+          <TrustStrip />
           <About />
+          <HowItWorks />
           <Services />
           <Credentials />
           <Suspense fallback={<div style={{ minHeight: '400px' }} aria-label={t('aria.loadingContactSection')} />}>
             <Contact />
           </Suspense>
+          <CrisisNotice />
         </main>
         <Footer />
       </div>
