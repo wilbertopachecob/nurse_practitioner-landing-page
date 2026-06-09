@@ -411,6 +411,9 @@ p { text-wrap: pretty; }
 }
 @media (max-width: 968px) { .contact-content { grid-template-columns: 1fr; } }
 
+.crisis-notice-wrap {
+  padding-bottom: var(--s-7);
+}
 .crisis-notice {
   display: flex; align-items: flex-start; gap: var(--s-5); flex-wrap: wrap;
   background: var(--alert-tint); border: 1px solid var(--alert-line);
