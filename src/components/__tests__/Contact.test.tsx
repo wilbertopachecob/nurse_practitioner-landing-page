@@ -23,8 +23,8 @@ describe('Contact', () => {
       </TestWrapper>
     );
 
-    const phoneLink = screen.getByText(/918.*417.*2969/);
-    expect(phoneLink).toBeInTheDocument();
+    const phoneLinks = screen.getAllByRole('link', { name: /918.*417.*2969/ });
+    expect(phoneLinks.length).toBeGreaterThan(0);
   });
 
   it('displays website link', () => {
@@ -38,33 +38,29 @@ describe('Contact', () => {
     expect(websiteLink).toBeInTheDocument();
   });
 
-  it('renders map iframe', () => {
-    render(
-      <TestWrapper>
-        <Contact />
-      </TestWrapper>
-    );
-
-    const iframe = screen.getByTitle(/Location.*Mind Rejuvenation/i);
-    expect(iframe).toBeInTheDocument();
-  });
-
-  it('uses IconWrapper components for contact icons', () => {
+  it('renders booking actions', () => {
     const { container } = render(
       <TestWrapper>
         <Contact />
       </TestWrapper>
     );
 
-    // Check that IconWrapper components are rendered (4 contact items)
-    const iconWrappers = container.querySelectorAll('.icon-wrapper');
-    expect(iconWrappers.length).toBe(4);
+    expect(container.querySelector('.book-actions .btn-primary')).toHaveAttribute('href', 'tel:+19184172969');
+    expect(screen.getByRole('link', { name: /send a message/i })).toHaveAttribute(
+      'href',
+      'mailto:mical.pacheco.pmhnp@gmail.com'
+    );
+  });
 
-    // Verify they have the medium size class (as used in Contact component)
-    iconWrappers.forEach((wrapper) => {
-      expect(wrapper).toHaveClass('icon-wrapper-medium');
-      expect(wrapper).toHaveClass('icon-wrapper-rotate-right');
-    });
+  it('uses inline contact icons', () => {
+    const { container } = render(
+      <TestWrapper>
+        <Contact />
+      </TestWrapper>
+    );
+
+    const icons = container.querySelectorAll('.contact-list .ico');
+    expect(icons.length).toBe(4);
   });
 
   it('should have no accessibility violations', async () => {
@@ -73,12 +69,6 @@ describe('Contact', () => {
         <Contact />
       </TestWrapper>
     );
-
-    // Remove iframe from container before testing as axe has issues with iframes in jsdom
-    const iframe = container.querySelector('iframe');
-    if (iframe) {
-      iframe.remove();
-    }
 
     const results = await axe(container);
     expect(results).toHaveNoViolations();

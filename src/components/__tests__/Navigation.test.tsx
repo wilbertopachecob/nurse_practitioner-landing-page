@@ -54,7 +54,6 @@ describe('Navigation', () => {
       </TestWrapper>
     );
 
-    expect(screen.getByText(/home/i)).toBeInTheDocument();
     expect(screen.getByText(/about me/i)).toBeInTheDocument();
     expect(screen.getByText(/how it works/i)).toBeInTheDocument();
     expect(screen.getByText(/services/i)).toBeInTheDocument();
@@ -165,8 +164,8 @@ describe('Navigation', () => {
     });
 
     // Click on a nav link
-    const homeLink = screen.getByText(/home/i);
-    fireEvent.click(homeLink);
+    const aboutLink = screen.getByText(/about me/i);
+    fireEvent.click(aboutLink);
 
     // Menu should close after clicking nav link
     await waitFor(() => {
@@ -230,15 +229,15 @@ describe('Navigation', () => {
       expect(toggleButton).toHaveAttribute('aria-expanded', 'true');
     });
 
-    const homeLink = screen.getByText(/home/i);
-    homeLink.focus();
+    const aboutLink = screen.getByText(/about me/i);
+    aboutLink.focus();
 
     // Press ArrowRight
-    fireEvent.keyDown(homeLink, { key: 'ArrowRight' });
+    fireEvent.keyDown(aboutLink, { key: 'ArrowRight' });
 
     await waitFor(() => {
-      const aboutLink = screen.getByText(/about me/i);
-      expect(aboutLink).toHaveFocus();
+      const approachLink = screen.getByText(/how it works/i);
+      expect(approachLink).toHaveFocus();
     });
   });
 
@@ -265,8 +264,8 @@ describe('Navigation', () => {
     fireEvent.keyDown(contactLink, { key: 'Home' });
 
     await waitFor(() => {
-      const homeLink = screen.getByText(/home/i);
-      expect(homeLink).toHaveFocus();
+      const aboutLink = screen.getByText(/about me/i);
+      expect(aboutLink).toHaveFocus();
     });
   });
 
@@ -286,11 +285,11 @@ describe('Navigation', () => {
       expect(toggleButton).toHaveAttribute('aria-expanded', 'true');
     });
 
-    const homeLink = screen.getByText(/home/i);
-    homeLink.focus();
+    const aboutLink = screen.getByText(/about me/i);
+    aboutLink.focus();
 
     // Press End
-    fireEvent.keyDown(homeLink, { key: 'End' });
+    fireEvent.keyDown(aboutLink, { key: 'End' });
 
     await waitFor(() => {
       const contactLink = screen.getByText(/contact/i);

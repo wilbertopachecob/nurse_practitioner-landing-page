@@ -23,7 +23,10 @@ describe('Credentials', () => {
       </TestWrapper>
     );
 
-    const title = screen.getByText('Credentials & Certifications');
+    const title = screen.getByRole('heading', {
+      level: 2,
+      name: 'Qualified, licensed, and accountable.',
+    });
     expect(title).toBeInTheDocument();
   });
 
@@ -46,8 +49,9 @@ describe('Credentials', () => {
       </TestWrapper>
     );
 
-    const certification = screen.getByText(/PMHNP-BC.*ANCC Board Certification/i);
+    const certification = screen.getByRole('heading', { level: 3, name: 'PMHNP-BC' });
     expect(certification).toBeInTheDocument();
+    expect(screen.getByText(/ANCC board certification/i)).toBeInTheDocument();
   });
 
   it('displays license credential', () => {
@@ -57,8 +61,9 @@ describe('Credentials', () => {
       </TestWrapper>
     );
 
-    const license = screen.getByText(/APRN.*Oklahoma License/i);
+    const license = screen.getByRole('heading', { level: 3, name: 'APRN' });
     expect(license).toBeInTheDocument();
+    expect(screen.getByText(/Oklahoma license/i)).toBeInTheDocument();
   });
 
   it('displays RN credential', () => {

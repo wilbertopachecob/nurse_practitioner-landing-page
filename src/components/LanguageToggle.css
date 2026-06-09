@@ -17,8 +17,8 @@
   border: 0;
   background: transparent;
   color: var(--text-secondary);
-  min-width: 40px;
-  min-height: 36px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: var(--r-pill);
   font-family: var(--font-sans);
   font-size: 0.75rem;

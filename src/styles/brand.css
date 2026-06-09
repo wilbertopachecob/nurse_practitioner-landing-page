@@ -130,6 +130,7 @@ p { text-wrap: pretty; }
   display: inline-flex; align-items: center; gap: var(--s-2);
   background: var(--sage-deep); color: #fff; font-weight: 600; font-size: 0.9rem;
   padding: 0.6rem 1.1rem; border-radius: var(--r-pill); white-space: nowrap;
+  min-width: 44px; min-height: 44px;
   box-shadow: var(--shadow-sm); transition: background .18s, transform .18s, box-shadow .18s;
 }
 .header-cta:hover { background: var(--sage-press); color: #fff; transform: translateY(-1px); box-shadow: var(--shadow); }
