@@ -1,17 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#6BC4A6;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Heart shape -->
-  <path d="M32 48 C24 40, 12 28, 12 20 C12 14, 16 10, 22 10 C26 10, 30 12, 32 16 C34 12, 38 10, 42 10 C48 10, 52 14, 52 20 C52 28, 40 40, 32 48 Z" 
-        fill="url(#heartGradient)" 
-        stroke="#4A90E2" 
-        stroke-width="1.5"/>
-  
-  <!-- Subtle shine effect -->
-  <ellipse cx="28" cy="22" rx="6" ry="8" fill="#FFFFFF" opacity="0.3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MP">
+  <circle cx="32" cy="32" r="32" fill="#355643"/>
+  <text
+    x="32"
+    y="32"
+    text-anchor="middle"
+    dominant-baseline="central"
+    fill="#ffffff"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="24"
+    font-weight="500"
+    letter-spacing="0.02em"
+  >MP</text>
 </svg>

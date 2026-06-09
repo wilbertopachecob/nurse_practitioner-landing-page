@@ -33,11 +33,32 @@ p { text-wrap: pretty; }
   padding-inline: 2rem;
   max-width: var(--maxw, 1160px);
   margin: 0 auto;
+  min-width: 0;
 }
 @media (max-width: 768px) {
   .section {
     padding-inline: 1rem;
   }
+}
+
+/* Keep cards inside the section gutter on narrow viewports */
+.about-content,
+.how-grid,
+.services-grid,
+.credentials-grid,
+.contact-content {
+  min-width: 0;
+}
+
+.education,
+.how-step,
+.service-card,
+.credential-item,
+.contact-card,
+.book-card {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .section-head {
@@ -337,6 +358,10 @@ p { text-wrap: pretty; }
   align-items: center;
   text-decoration: none;
   color: inherit;
+  min-width: 0;
+}
+.contact-list a > span:last-child {
+  min-width: 0;
 }
 .contact-list .ico {
   width: 40px;
@@ -359,6 +384,7 @@ p { text-wrap: pretty; }
 .contact-list b {
   color: var(--text-primary);
   font-size: 0.98rem;
+  overflow-wrap: anywhere;
 }
 .book-card {
   display: flex;
@@ -409,7 +435,18 @@ p { text-wrap: pretty; }
   width: 16px;
   height: 16px;
 }
-@media (max-width: 968px) { .contact-content { grid-template-columns: 1fr; } }
+@media (max-width: 968px) { .contact-content { grid-template-columns: minmax(0, 1fr); } }
+
+@media (max-width: 768px) {
+  .education,
+  .how-step,
+  .contact-card,
+  .book-card,
+  .service-card,
+  .credential-item {
+    padding: var(--s-6);
+  }
+}
 
 .crisis-notice-wrap {
   padding-bottom: var(--s-7);
