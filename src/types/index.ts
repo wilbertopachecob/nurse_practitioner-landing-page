@@ -92,15 +92,6 @@ export interface LanguageContextType {
 // Utility Function Types
 export type ScrollToSectionFunction = (targetId: string, offset?: number) => void;
 
-// DOM API Types (for ESLint)
-declare global {
-  interface IntersectionObserverInit {
-    root?: Element | null;
-    rootMargin?: string;
-    threshold?: number | number[];
-  }
-}
-
 export interface AnimationOptions {
   threshold?: number;
   rootMargin?: string;

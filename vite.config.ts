@@ -13,22 +13,31 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Split vendor libraries into separate chunks
-          'react-vendor': ['react', 'react-dom'],
-          'i18n-vendor': ['react-i18next', 'i18next'],
-          'icons-vendor': ['react-icons'],
+        manualChunks(id) {
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) {
+            return 'react-vendor';
+          }
+          if (id.includes('node_modules/i18next') || id.includes('node_modules/react-i18next')) {
+            return 'i18n-vendor';
+          }
+          if (id.includes('node_modules/react-icons')) {
+            return 'icons-vendor';
+          }
         },
       },
     },
-    // Enable tree shaking
-    minify: 'esbuild',
+    // Rolldown uses Oxc for minification by default in Vite 8
     // Increase chunk size warning limit
     chunkSizeWarningLimit: 1000,
   },
   test: {
     globals: true,
     environment: 'jsdom',
+    environmentOptions: {
+      jsdom: {
+        url: 'http://localhost',
+      },
+    },
     setupFiles: './src/test/setup.ts',
     css: true,
   },

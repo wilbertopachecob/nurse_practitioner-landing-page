@@ -10,6 +10,14 @@ vi.mock('react-i18next', () => ({
     i18n: {
       changeLanguage: vi.fn(),
     },
+    t: (key: string) => {
+      const translations: Record<string, string> = {
+        'aria.switchTo': 'Switch to',
+        'aria.spanish': 'Spanish',
+        'aria.english': 'English',
+      };
+      return translations[key] ?? key;
+    },
   }),
 }));
 
