@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { FaCalendarCheck } from 'react-icons/fa';
+import BrandLogo from '@/components/BrandLogo';
 import Navigation from '@/components/Navigation';
 import LanguageToggle from '@/components/LanguageToggle';
 import { CONTACT } from '@/constants';
@@ -10,6 +11,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-container container">
+        <BrandLogo />
         <Navigation />
         <div className="header-controls">
           <LanguageToggle />

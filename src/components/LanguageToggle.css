@@ -1,41 +1,47 @@
 .language-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 3px;
-  background: var(--surface, #fff);
+  background: var(--surface-soft);
   border: 1px solid var(--border-color);
   border-radius: var(--r-pill);
   gap: 2px;
+  flex-shrink: 0;
 }
 
-.language-toggle-option {
+:root[data-theme="dark"] .language-toggle {
+  background: var(--bg-secondary);
+}
+
+.language-toggle .language-toggle-option {
   border: 0;
   background: transparent;
   color: var(--text-secondary);
-  min-width: 36px;
-  min-height: 34px;
+  min-width: 40px;
+  min-height: 36px;
   border-radius: var(--r-pill);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  padding: 0 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 0 0.75rem;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
   line-height: 1;
 }
 
-.language-toggle-option:hover:not(.is-active) {
+.language-toggle .language-toggle-option:hover:not(.is-active) {
   background: var(--sage-tint);
   color: var(--sage-deep);
 }
 
-.language-toggle-option.is-active {
+.language-toggle .language-toggle-option.is-active {
   background: var(--sage-deep);
   color: #fff;
+  box-shadow: var(--shadow-sm);
 }
 
-.language-toggle-option:focus-visible {
-  outline: 2px solid var(--focus, var(--sage));
+.language-toggle .language-toggle-option:focus-visible {
+  outline: 2px solid var(--focus);
   outline-offset: 2px;
 }

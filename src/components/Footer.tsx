@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import BrandLogo from '@/components/BrandLogo';
 import { CONTACT, SECTIONS } from '@/constants';
 
 const Footer = memo(() => {
@@ -9,8 +10,8 @@ const Footer = memo(() => {
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          <div className="footer-col">
-            <h4>Mical Pacheco</h4>
+          <div className="footer-col footer-col-brand">
+            <BrandLogo variant="footer" />
             <p>{t('footer.blurb')}</p>
           </div>
           <div className="footer-col">
