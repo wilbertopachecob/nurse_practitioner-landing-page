@@ -18,7 +18,7 @@ const About: React.FC = () => {
           <p className="about-approach">{t('about.paragraph3')}</p>
           <p className="about-approach">{t('about.paragraph4')}</p>
           <div className="about-sign">
-            <span className="sig">Mical Pacheco</span>
+            <span className="sig">Mical Pacheco · </span>
             <span>MSN, APRN, PMHNP-BC</span>
           </div>
         </div>
