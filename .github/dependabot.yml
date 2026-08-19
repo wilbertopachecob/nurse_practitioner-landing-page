@@ -1,0 +1,85 @@
+# Dependabot — nurse_practitioner-landing-page
+#
+# Strategy:
+#   1. Batch every minor/patch into one weekly PR (low risk on SemVer).
+#   2. On majors, only group packages that must ship at the same version.
+#   3. Leave independent majors (typescript, react-icons, jsdom, eslint
+#      plugins, @axe-core/react, @types/node) as individual PRs.
+#   4. Groups without `applies-to` cover version updates only, so security
+#      alerts still land as their own fast PRs.
+#
+# First matching group wins. Keep the catch-all above the lockstep groups
+# so patches batch together, and majors still fall through to lockstep.
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
+
+      # react / react-dom share a version. Types must follow.
+      # Do not use "react*" — that would pull in react-i18next and react-icons.
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+
+      # react-i18next declares a peer on i18next.
+      i18n:
+        patterns:
+          - i18next
+          - react-i18next
+
+      # eslint and @eslint/js are published in lockstep.
+      eslint-core:
+        patterns:
+          - eslint
+          - "@eslint/js"
+
+      # plugin and parser must be the same @typescript-eslint version.
+      typescript-eslint:
+        patterns:
+          - "@typescript-eslint/*"
+
+      # Same Testing Library family; peer ranges assume they move together.
+      testing-library:
+        patterns:
+          - "@testing-library/*"
+
+      # Types package tracks jest-axe's API.
+      jest-axe:
+        patterns:
+          - jest-axe
+          - "@types/jest-axe"
+
+      # Vite 8 + plugin-react 6 + Vitest 4 are one toolchain.
+      # A Vite major without a matching Vitest bump breaks `npm test`.
+      vite:
+        patterns:
+          - vite
+          - vitest
+          - "@vitejs/plugin-react"
+
+  # No workflows yet; this is ready for when CI is added.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      github-actions:
+        patterns:
+          - "*"
