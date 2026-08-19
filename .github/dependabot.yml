@@ -73,7 +73,6 @@ updates:
           - vitest
           - "@vitejs/plugin-react"
 
-  # No workflows yet; this is ready for when CI is added.
   - package-ecosystem: github-actions
     directory: /
     schedule:
