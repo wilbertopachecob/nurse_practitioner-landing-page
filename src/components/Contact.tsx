@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGlobe, FaCalendarCheck } from 'react-icons/fa';
-import { CONTACT, MAPS, SECTIONS } from '@/constants';
+import { CONTACT, SECTIONS } from '@/constants';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
               <ul className="contact-list">
                 <li>
                   <a
-                    href={MAPS.linkUrl}
+                    href={CONTACT.practice.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${t('contact.mindName')} - ${t('aria.viewOnGoogleMaps')}`}
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
                     <span className="ico" aria-hidden="true"><FaMapMarkerAlt /></span>
                     <span>
                       <small>{t('contact.location')}</small>
-                      <b>{t('contact.mindPlace')}</b>
+                      <b>{CONTACT.practice.address}</b>
                     </span>
                   </a>
                 </li>
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                     <span className="ico" aria-hidden="true"><FaMapMarkerAlt /></span>
                     <span>
                       <small>{t('contact.location')}</small>
-                      <b>{t('contact.druePlace')}</b>
+                      <b>{CONTACT.drue.address}</b>
                     </span>
                   </a>
                 </li>

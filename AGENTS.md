@@ -111,10 +111,11 @@ to "start a conversation" (call / book / message). Don't add competing actions.
 ## 8. Known facts (keep accurate)
 
 - Name / title: **Mical Pacheco, MSN, APRN, PMHNP-BC** — Psychiatric Mental Health NP.
-- Location: Tulsa / Broken Arrow, Oklahoma. Telehealth statewide.
+- Location: Tulsa, Oklahoma (Mind Rejuvenation and Drue Day). Telehealth statewide.
+- Mind Rejuvenation: 4922 E 73rd St, Tulsa, OK 74136 · https://www.mindrejuvenation.net/
 - Positioning: Tulsa's #1 bilingual (English/Spanish) psychiatric nurse practitioner.
 - Current positions: **Mind Rejuvenation** (2026–present) and **Drue Day Counseling & Consulting** (2026–present; Fridays and Saturdays, Tulsa).
-- Drue Day: (918) 609-0404 · https://www.druedaycounseling.com/ · booking https://drueday.clientsecure.me · 1560 E 21st St, Ste 320, Tulsa, OK 74114.
+- Drue Day: (918) 609-0404 · https://www.druedaycounseling.com/ · booking https://drueday.clientsecure.me · 1560 E 21st St Ste 320, Tulsa, OK 74114.
 - Phone: **(918) 417-2969** · Email: `mical.pacheco.pmhnp@gmail.com`.
 - Credentials: PMHNP-BC (ANCC), APRN (Oklahoma), RN compact license, BLS/ACLS/CPR.
 - Languages: English (native), Spanish (clinical/conversational).

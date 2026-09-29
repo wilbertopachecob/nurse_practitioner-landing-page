@@ -30,8 +30,8 @@ export const CONTACT = {
   },
   practice: {
     name: 'Mind Rejuvenation',
-    location: 'Broken Arrow, Oklahoma',
-    fullAddress: 'Mind Rejuvenation, Broken Arrow, Oklahoma',
+    address: '4922 E 73rd St, Tulsa, OK 74136',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=4922+E+73rd+St+Tulsa+OK+74136',
   },
   drue: {
     name: 'Drue Day Counseling & Consulting',
@@ -43,9 +43,9 @@ export const CONTACT = {
       url: 'https://www.druedaycounseling.com/',
       display: 'www.druedaycounseling.com',
     },
+    address: '1560 E 21st St Ste 320, Tulsa, OK 74114',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=1560+E+21st+St+Ste+320+Tulsa+OK+74114',
     booking: 'https://drueday.clientsecure.me',
-    location: '1560 E 21st St, Ste 320, Tulsa, OK 74114',
   },
 } as const;
 
@@ -59,7 +59,7 @@ export const SOCIAL_MEDIA = {
 // Maps & URLs
 export const MAPS = {
   embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51607.65952950128!2d-95.99746227264406!3d36.057425945893876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6924227674b4b%3A0x4dfb54d1248fb6f5!2sMind%20Rejuvenation!5e0!3m2!1sen!2sus!4v1771086885120!5m2!1sen!2sus',
-  linkUrl: 'https://maps.app.goo.gl/Uc1sSzEgmiHjx3JH8',
+  linkUrl: CONTACT.practice.mapsUrl,
 } as const;
 
 // Base URL for SEO
