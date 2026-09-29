@@ -8,10 +8,10 @@
   },
   "hero": {
     "pill": "Aceptando nuevos pacientes · Telemedicina disponible",
-    "promise": "Atención de salud mental que se siente segura, humana y sin prisas.",
-    "h1a": "Atención de salud mental que se siente",
-    "h1b": "segura, humana y sin prisas.",
-    "sub": "Soy Mical Pacheco, enfermera practicante psiquiátrica certificada que ofrece evaluación cuidadosa, manejo de medicamentos y atención bilingüe a lo largo de la vida.",
+    "promise": "La enfermera practicante psiquiátrica bilingüe #1 en Tulsa.",
+    "h1a": "La #1 bilingüe en Tulsa,",
+    "h1b": "enfermera practicante psiquiátrica.",
+    "sub": "Soy Mical Pacheco, PMHNP certificada. Evaluación y manejo de medicamentos en inglés y español, en Mind Rejuvenation y Drue Day Counseling & Consulting.",
     "note": "Llamada introductoria gratuita de 15 minutos · La mayoría de las dudas resueltas antes de tu primera visita.",
     "bilingual": "Inglés y Español",
     "tele": "Telemedicina segura"
@@ -28,8 +28,8 @@
     "aria": "Credenciales de un vistazo",
     "certB": "ANCC",
     "certR": "certificada",
-    "biB": "Bilingüe",
-    "biR": "Inglés / Español",
+    "biB": "#1 en Tulsa",
+    "biR": "NP psiquiátrica bilingüe",
     "teleB": "Telemedicina",
     "teleR": "compatible con HIPAA",
     "expB": "10+ años",
@@ -40,7 +40,7 @@
     "title": "La atención debe sentirse como ser realmente escuchado.",
     "paragraph1": "Bienvenido. Me alegra mucho que estés aquí.",
     "paragraph2": "Buscar atención de salud mental puede sentirse abrumador, y solo estar aquí es un primer paso importante. Mi práctica se basa en la compasión, el respeto y la conexión genuina. Creo que la atención debe sentirse segura, de apoyo y adaptada a ti como persona íntegra.",
-    "paragraph3": "Como Enfermera Practicante de Salud Mental Psiquiátrica certificada, me tomo el tiempo para escuchar y entender tu historia, tus preocupaciones y tus metas. Ya sea que te sientas ansioso, abrumado, estancado, o simplemente busques claridad y apoyo, no tienes que navegarlo solo.",
+    "paragraph3": "Como Enfermera Practicante de Salud Mental Psiquiátrica certificada, me tomo el tiempo para escuchar y entender tu historia, tus preocupaciones y tus metas. Atiendo pacientes en Mind Rejuvenation y en Drue Day Counseling & Consulting en Tulsa. Ya sea que te sientas ansioso, abrumado, estancado, o simplemente busques claridad y apoyo, no tienes que navegarlo solo.",
     "paragraph4": "Sería un honor apoyarte en tu camino hacia la sanación y el equilibrio.",
     "education": {
       "title": "Educación",
@@ -48,7 +48,7 @@
       "bsn": "Licenciatura en Ciencias de Enfermería, Universidad Estatal del Noreste (2021)",
       "adn": "Grado Asociado en Enfermería, Colegio Comunitario de Tulsa (2016)"
     },
-    "location": "Broken Arrow, Oklahoma"
+    "location": "Tulsa, Oklahoma"
   },
   "how": {
     "eyebrow": "Para comenzar",
@@ -74,7 +74,7 @@
     "crisis": "Intervención en Crisis",
     "crisisDesc": "Apoyo e intervención inmediata durante crisis de salud mental",
     "bilingual": "Atención Psiquiátrica Bilingüe",
-    "bilingualDesc": "Servicios disponibles en inglés y español",
+    "bilingualDesc": "La enfermera practicante psiquiátrica bilingüe #1 en Tulsa — atención en inglés y español",
     "telehealth": "Servicios de Telemedicina",
     "telehealthDesc": "Citas psiquiátricas virtuales compatibles con HIPAA",
     "therapy": "Modalidades Psicoterapéuticas",
@@ -95,6 +95,8 @@
     "certsSub": "Certificaciones vigentes",
     "position": "Mind Rejuvenation",
     "positionSub": "Posición actual · 2026-presente",
+    "positionDrue": "Drue Day Counseling",
+    "positionDrueSub": "Posición actual · 2026-presente",
     "languages": "Inglés y Español",
     "languagesSub": "Fluidez nativa / clínica"
   },
@@ -105,9 +107,13 @@
     "detailsTitle": "Datos de contacto",
     "phone": "Teléfono",
     "email": "Correo",
-    "website": "Sitio Web",
+    "website": "Sitio web",
     "location": "Ubicación",
-    "practice": "Mind Rejuvenation, Oklahoma",
+    "practices": "Consultorios",
+    "mindName": "Mind Rejuvenation",
+    "mindPlace": "Broken Arrow",
+    "drueName": "Drue Day Counseling",
+    "druePlace": "Tulsa",
     "businessCard": "Tarjeta de Presentación",
     "businessCardDesc": "Escanee para guardar información de contacto"
   },
@@ -124,7 +130,7 @@
     "note": "Respuesta típica dentro de un día hábil."
   },
   "footer": {
-    "blurb": "Atención psiquiátrica compasiva y bilingüe para adultos a lo largo de la vida. Broken Arrow, Oklahoma y telemedicina en todo el estado.",
+    "blurb": "La enfermera practicante psiquiátrica bilingüe (inglés/español) #1 en Tulsa. Atención en Mind Rejuvenation y Drue Day, con telemedicina en todo Oklahoma.",
     "explore": "Explorar",
     "contact": "Contacto",
     "copyright": "© 2026 Mical Pacheco, PMHNP-BC. Todos los derechos reservados."

@@ -30,8 +30,22 @@ export const CONTACT = {
   },
   practice: {
     name: 'Mind Rejuvenation',
-    location: 'Tulsa, Oklahoma',
-    fullAddress: 'Mind Rejuvenation, Oklahoma',
+    location: 'Broken Arrow, Oklahoma',
+    fullAddress: 'Mind Rejuvenation, Broken Arrow, Oklahoma',
+  },
+  drue: {
+    name: 'Drue Day Counseling & Consulting',
+    phone: {
+      display: '(918) 609-0404',
+      tel: 'tel:+19186090404',
+    },
+    website: {
+      url: 'https://www.druedaycounseling.com/',
+      display: 'www.druedaycounseling.com',
+    },
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=1560+E+21st+St+Ste+320+Tulsa+OK+74114',
+    booking: 'https://drueday.clientsecure.me',
+    location: '1560 E 21st St, Ste 320, Tulsa, OK 74114',
   },
 } as const;
 
@@ -86,11 +100,11 @@ export const IMAGES = {
 // SEO Meta Descriptions
 export const SEO = {
   descriptions: {
-    en: 'Board-certified Psychiatric Mental Health Nurse Practitioner providing comprehensive psychiatric evaluation and medication management. Accepting new patients. Bilingual services (English/Spanish). Telehealth available. Located in Broken Arrow, Oklahoma.',
-    es: 'Enfermera Practicante de Salud Mental Psiquiátrica certificada que brinda evaluación psiquiátrica integral y manejo de medicamentos. Aceptando nuevos pacientes. Servicios bilingües (Inglés/Español). Telemedicina disponible. Ubicada en Broken Arrow, Oklahoma.',
+    en: "Tulsa's #1 bilingual (English/Spanish) psychiatric nurse practitioner. Board-certified PMHNP at Mind Rejuvenation and Drue Day. Accepting new patients.",
+    es: 'La enfermera practicante psiquiátrica bilingüe (inglés/español) #1 en Tulsa. PMHNP certificada en Mind Rejuvenation y Drue Day. Nuevos pacientes bienvenidos.',
   },
   titles: {
-    en: 'Mical Pacheco, PMHNP-BC | Board-Certified Psychiatric Nurse Practitioner | Broken Arrow, OK',
-    es: 'Mical Pacheco, PMHNP-BC | Enfermera Practicante Psiquiátrica Certificada | Broken Arrow, OK',
+    en: "Mical Pacheco, PMHNP-BC | #1 Bilingual Psychiatric NP in Tulsa",
+    es: 'Mical Pacheco, PMHNP-BC | NP psiquiátrica bilingüe #1 en Tulsa',
   },
 } as const;

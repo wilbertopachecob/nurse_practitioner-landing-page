@@ -8,10 +8,10 @@
   },
   "hero": {
     "pill": "Accepting new patients · Telehealth available",
-    "promise": "Mental health care that feels safe, human, and unhurried.",
-    "h1a": "Mental health care that feels",
-    "h1b": "safe, human, and unhurried.",
-    "sub": "I'm Mical Pacheco, a board-certified psychiatric nurse practitioner offering thoughtful evaluation, medication management, and bilingual care across the lifespan.",
+    "promise": "Tulsa's #1 bilingual psychiatric nurse practitioner.",
+    "h1a": "Tulsa's #1 bilingual",
+    "h1b": "psychiatric nurse practitioner.",
+    "sub": "I'm Mical Pacheco, a board-certified PMHNP offering thoughtful evaluation and medication management in English and Spanish — at Mind Rejuvenation and Drue Day Counseling & Consulting.",
     "note": "Free 15-minute introductory call · Most questions answered before your first visit.",
     "bilingual": "English & Spanish",
     "tele": "Secure telehealth"
@@ -28,8 +28,8 @@
     "aria": "Credentials at a glance",
     "certB": "ANCC",
     "certR": "board-certified",
-    "biB": "Bilingual",
-    "biR": "English / Spanish",
+    "biB": "#1 in Tulsa",
+    "biR": "bilingual psychiatric NP",
     "teleB": "HIPAA-compliant",
     "teleR": "telehealth",
     "expB": "10+ years",
@@ -40,7 +40,7 @@
     "title": "Care should feel like being truly listened to.",
     "paragraph1": "Welcome. I am really glad you are here.",
     "paragraph2": "Looking for mental health care can feel overwhelming, and just being here is an important first step. My practice is grounded in compassion, respect, and genuine connection. I believe care should feel safe, supportive, and tailored to you as a whole person.",
-    "paragraph3": "As a board certified Psychiatric Mental Health Nurse Practitioner, I take time to listen and understand your story, your concerns, and your goals. Whether you are feeling anxious, overwhelmed, stuck, or simply seeking clarity and support, you do not have to navigate it alone.",
+    "paragraph3": "As a board certified Psychiatric Mental Health Nurse Practitioner, I take time to listen and understand your story, your concerns, and your goals. I see patients at Mind Rejuvenation and at Drue Day Counseling & Consulting in Tulsa. Whether you are feeling anxious, overwhelmed, stuck, or simply seeking clarity and support, you do not have to navigate it alone.",
     "paragraph4": "It would be an honor to support you on your journey toward healing and balance.",
     "education": {
       "title": "Education",
@@ -48,7 +48,7 @@
       "bsn": "Bachelor of Science in Nursing, Northeastern State University (2021)",
       "adn": "Associate Degree in Nursing, Tulsa Community College (2016)"
     },
-    "location": "Broken Arrow, Oklahoma"
+    "location": "Tulsa, Oklahoma"
   },
   "how": {
     "eyebrow": "Getting started",
@@ -74,7 +74,7 @@
     "crisis": "Crisis Intervention",
     "crisisDesc": "Immediate support and intervention during mental health crises",
     "bilingual": "Bilingual Psychiatric Care",
-    "bilingualDesc": "Services available in English and Spanish",
+    "bilingualDesc": "Tulsa's #1 bilingual psychiatric nurse practitioner — care in English and Spanish",
     "telehealth": "Telehealth Services",
     "telehealthDesc": "HIPAA-compliant virtual psychiatric appointments",
     "therapy": "Psychotherapeutic Modalities",
@@ -95,6 +95,8 @@
     "certsSub": "Current certifications",
     "position": "Mind Rejuvenation",
     "positionSub": "Current role · 2026-present",
+    "positionDrue": "Drue Day Counseling",
+    "positionDrueSub": "Current role · 2026-present",
     "languages": "English & Spanish",
     "languagesSub": "Native / clinical fluency"
   },
@@ -107,7 +109,11 @@
     "email": "Email",
     "website": "Website",
     "location": "Location",
-    "practice": "Mind Rejuvenation, Oklahoma",
+    "practices": "Practices",
+    "mindName": "Mind Rejuvenation",
+    "mindPlace": "Broken Arrow",
+    "drueName": "Drue Day Counseling",
+    "druePlace": "Tulsa",
     "businessCard": "Business Card",
     "businessCardDesc": "Scan to save contact information"
   },
@@ -124,7 +130,7 @@
     "note": "Typical response within one business day."
   },
   "footer": {
-    "blurb": "Compassionate, bilingual psychiatric care for adults across the lifespan. Broken Arrow, Oklahoma and telehealth statewide.",
+    "blurb": "Tulsa's #1 bilingual (English/Spanish) psychiatric nurse practitioner. Care at Mind Rejuvenation and Drue Day, with telehealth across Oklahoma.",
     "explore": "Explore",
     "contact": "Contact",
     "copyright": "© 2026 Mical Pacheco, PMHNP-BC. All rights reserved."

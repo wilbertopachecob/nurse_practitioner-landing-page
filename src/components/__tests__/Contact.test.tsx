@@ -34,8 +34,14 @@ describe('Contact', () => {
       </TestWrapper>
     );
 
-    const websiteLink = screen.getByText(/mindrejuvenation/i);
-    expect(websiteLink).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /mindrejuvenation/i })).toHaveAttribute(
+      'href',
+      'https://www.mindrejuvenation.net/'
+    );
+    expect(screen.getByRole('link', { name: /druedaycounseling/i })).toHaveAttribute(
+      'href',
+      'https://www.druedaycounseling.com/'
+    );
   });
 
   it('renders booking actions', () => {
@@ -60,7 +66,9 @@ describe('Contact', () => {
     );
 
     const icons = container.querySelectorAll('.contact-list .ico');
-    expect(icons.length).toBe(4);
+    expect(icons.length).toBe(6);
+    expect(screen.getByRole('heading', { level: 5, name: 'Mind Rejuvenation' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 5, name: 'Drue Day Counseling' })).toBeInTheDocument();
   });
 
   it('should have no accessibility violations', async () => {

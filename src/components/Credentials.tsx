@@ -60,6 +60,15 @@ const Credentials: React.FC = () => {
         </article>
         <article className="credential-item parent-hover">
           <IconWrapper size="medium" className="icon-wrapper-rotate-left">
+            <FaBriefcase />
+          </IconWrapper>
+          <div className="credential-content">
+            <h3>{t('credentials.positionDrue')}</h3>
+            <p>{t('credentials.positionDrueSub')}</p>
+          </div>
+        </article>
+        <article className="credential-item parent-hover">
+          <IconWrapper size="medium" className="icon-wrapper-rotate-left">
             <FaLanguage />
           </IconWrapper>
           <div className="credential-content">

@@ -37,9 +37,8 @@ describe('Credentials', () => {
       </TestWrapper>
     );
 
-    // Should render 6 credential items
     const credentialItems = document.querySelectorAll('.credential-item');
-    expect(credentialItems.length).toBe(6);
+    expect(credentialItems.length).toBe(7);
   });
 
   it('displays certification credential', () => {
@@ -86,7 +85,7 @@ describe('Credentials', () => {
 
     // Check that IconWrapper components are rendered
     const iconWrappers = container.querySelectorAll('.icon-wrapper');
-    expect(iconWrappers.length).toBe(6);
+    expect(iconWrappers.length).toBe(7);
 
     // Verify they have the medium size class
     iconWrappers.forEach((wrapper) => {
