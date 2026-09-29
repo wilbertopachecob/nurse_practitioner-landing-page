@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGlobe, FaCalendarCheck } from 'react-icons/fa';
-import { CONTACT, MAPS, SECTIONS } from '@/constants';
+import { CONTACT, SECTIONS } from '@/constants';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -34,35 +34,76 @@ const Contact: React.FC = () => {
                 </span>
               </a>
             </li>
-            <li>
-              <a
-                href={MAPS.linkUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${t('contact.location')} - ${t('aria.viewOnGoogleMaps')}`}
-              >
-                <span className="ico" aria-hidden="true"><FaMapMarkerAlt /></span>
-                <span>
-                  <small>{t('contact.location')}</small>
-                  <b>{t('contact.practice')}</b>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href={CONTACT.website.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${t('aria.visit')} ${CONTACT.website.display}`}
-              >
-                <span className="ico" aria-hidden="true"><FaGlobe /></span>
-                <span>
-                  <small>{t('contact.website')}</small>
-                  <b>{CONTACT.website.display}</b>
-                </span>
-              </a>
-            </li>
           </ul>
+          <div className="practice-groups">
+            <h4>{t('contact.practices')}</h4>
+            <article className="practice-block">
+              <h5>{t('contact.mindName')}</h5>
+              <ul className="contact-list">
+                <li>
+                  <a
+                    href={CONTACT.practice.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t('contact.mindName')} - ${t('aria.viewOnGoogleMaps')}`}
+                  >
+                    <span className="ico" aria-hidden="true"><FaMapMarkerAlt /></span>
+                    <span>
+                      <small>{t('contact.location')}</small>
+                      <b>{CONTACT.practice.address}</b>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={CONTACT.website.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t('aria.visit')} ${CONTACT.website.display}`}
+                  >
+                    <span className="ico" aria-hidden="true"><FaGlobe /></span>
+                    <span>
+                      <small>{t('contact.website')}</small>
+                      <b>{CONTACT.website.display}</b>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article className="practice-block">
+              <h5>{t('contact.drueName')}</h5>
+              <ul className="contact-list">
+                <li>
+                  <a
+                    href={CONTACT.drue.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t('contact.drueName')} - ${t('aria.viewOnGoogleMaps')}`}
+                  >
+                    <span className="ico" aria-hidden="true"><FaMapMarkerAlt /></span>
+                    <span>
+                      <small>{t('contact.location')}</small>
+                      <b>{CONTACT.drue.address}</b>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={CONTACT.drue.website.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t('aria.visit')} ${CONTACT.drue.website.display}`}
+                  >
+                    <span className="ico" aria-hidden="true"><FaGlobe /></span>
+                    <span>
+                      <small>{t('contact.website')}</small>
+                      <b>{CONTACT.drue.website.display}</b>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
         </div>
         <div className="book-card">
           <span className="eyebrow">{t('book.eyebrow')}</span>

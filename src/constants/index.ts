@@ -30,8 +30,22 @@ export const CONTACT = {
   },
   practice: {
     name: 'Mind Rejuvenation',
-    location: 'Tulsa, Oklahoma',
-    fullAddress: 'Mind Rejuvenation, Oklahoma',
+    address: '4922 E 73rd St, Tulsa, OK 74136',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=4922+E+73rd+St+Tulsa+OK+74136',
+  },
+  drue: {
+    name: 'Drue Day Counseling & Consulting',
+    phone: {
+      display: '(918) 609-0404',
+      tel: 'tel:+19186090404',
+    },
+    website: {
+      url: 'https://www.druedaycounseling.com/',
+      display: 'www.druedaycounseling.com',
+    },
+    address: '1560 E 21st St Ste 320, Tulsa, OK 74114',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=1560+E+21st+St+Ste+320+Tulsa+OK+74114',
+    booking: 'https://drueday.clientsecure.me',
   },
 } as const;
 
@@ -45,7 +59,7 @@ export const SOCIAL_MEDIA = {
 // Maps & URLs
 export const MAPS = {
   embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51607.65952950128!2d-95.99746227264406!3d36.057425945893876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6924227674b4b%3A0x4dfb54d1248fb6f5!2sMind%20Rejuvenation!5e0!3m2!1sen!2sus!4v1771086885120!5m2!1sen!2sus',
-  linkUrl: 'https://maps.app.goo.gl/Uc1sSzEgmiHjx3JH8',
+  linkUrl: CONTACT.practice.mapsUrl,
 } as const;
 
 // Base URL for SEO
@@ -86,11 +100,11 @@ export const IMAGES = {
 // SEO Meta Descriptions
 export const SEO = {
   descriptions: {
-    en: 'Board-certified Psychiatric Mental Health Nurse Practitioner providing comprehensive psychiatric evaluation and medication management. Accepting new patients. Bilingual services (English/Spanish). Telehealth available. Located in Broken Arrow, Oklahoma.',
-    es: 'Enfermera Practicante de Salud Mental Psiquiátrica certificada que brinda evaluación psiquiátrica integral y manejo de medicamentos. Aceptando nuevos pacientes. Servicios bilingües (Inglés/Español). Telemedicina disponible. Ubicada en Broken Arrow, Oklahoma.',
+    en: "Tulsa's #1 bilingual (English/Spanish) psychiatric nurse practitioner. Board-certified PMHNP at Mind Rejuvenation and Drue Day. Accepting new patients.",
+    es: 'La enfermera practicante psiquiátrica bilingüe (inglés/español) #1 en Tulsa. PMHNP certificada en Mind Rejuvenation y Drue Day. Nuevos pacientes bienvenidos.',
   },
   titles: {
-    en: 'Mical Pacheco, PMHNP-BC | Board-Certified Psychiatric Nurse Practitioner | Broken Arrow, OK',
-    es: 'Mical Pacheco, PMHNP-BC | Enfermera Practicante Psiquiátrica Certificada | Broken Arrow, OK',
+    en: "Mical Pacheco, PMHNP-BC | #1 Bilingual Psychiatric NP in Tulsa",
+    es: 'Mical Pacheco, PMHNP-BC | NP psiquiátrica bilingüe #1 en Tulsa',
   },
 } as const;

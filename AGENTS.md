@@ -100,7 +100,7 @@ Target **WCAG 2.2 AA**.
 ## 7. Page structure (current)
 
 `Header (sticky, CTA) → Hero (promise + portrait) → Trust strip → About + Education
-→ How it works (3 steps) → Services (8) → Credentials (6) → Contact + Booking +
+→ How it works (3 steps) → Services (8) → Credentials (7) → Contact + Booking +
 Crisis notice → Footer`
 
 When adding a section, keep the single-CTA discipline: it should ultimately point
@@ -111,8 +111,11 @@ to "start a conversation" (call / book / message). Don't add competing actions.
 ## 8. Known facts (keep accurate)
 
 - Name / title: **Mical Pacheco, MSN, APRN, PMHNP-BC** — Psychiatric Mental Health NP.
-- Location: Broken Arrow / Tulsa area, Oklahoma. Telehealth statewide.
-- Current position: **Mind Rejuvenation** (2026–present).
+- Location: Tulsa, Oklahoma (Mind Rejuvenation and Drue Day). Telehealth statewide.
+- Mind Rejuvenation: 4922 E 73rd St, Tulsa, OK 74136 · https://www.mindrejuvenation.net/
+- Positioning: Tulsa's #1 bilingual (English/Spanish) psychiatric nurse practitioner.
+- Current positions: **Mind Rejuvenation** (2026–present) and **Drue Day Counseling & Consulting** (2026–present; Fridays and Saturdays, Tulsa).
+- Drue Day: (918) 609-0404 · https://www.druedaycounseling.com/ · booking https://drueday.clientsecure.me · 1560 E 21st St Ste 320, Tulsa, OK 74114.
 - Phone: **(918) 417-2969** · Email: `mical.pacheco.pmhnp@gmail.com`.
 - Credentials: PMHNP-BC (ANCC), APRN (Oklahoma), RN compact license, BLS/ACLS/CPR.
 - Languages: English (native), Spanish (clinical/conversational).

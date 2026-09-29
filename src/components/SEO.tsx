@@ -11,17 +11,39 @@ const SEO: React.FC = () => {
     // Update document language
     document.documentElement.lang = currentLang;
 
-    // Update meta description based on language
+    const title = SEO_CONSTANTS.titles[currentLang] || SEO_CONSTANTS.titles.en;
+    const description =
+      SEO_CONSTANTS.descriptions[currentLang] || SEO_CONSTANTS.descriptions.en;
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        SEO_CONSTANTS.descriptions[currentLang] || SEO_CONSTANTS.descriptions.en
-      );
+      metaDescription.setAttribute('content', description);
     }
 
-    // Update title based on language
-    document.title = SEO_CONSTANTS.titles[currentLang] || SEO_CONSTANTS.titles.en;
+    const metaTitle = document.querySelector('meta[name="title"]');
+    if (metaTitle) {
+      metaTitle.setAttribute('content', title);
+    }
+
+    document.title = title;
+
+    const socialSelectors = [
+      'meta[property="og:title"]',
+      'meta[property="twitter:title"]',
+      'meta[name="twitter:title"]',
+    ];
+    socialSelectors.forEach((selector) => {
+      document.querySelector(selector)?.setAttribute('content', title);
+    });
+
+    const socialDescriptions = [
+      'meta[property="og:description"]',
+      'meta[property="twitter:description"]',
+      'meta[name="twitter:description"]',
+    ];
+    socialDescriptions.forEach((selector) => {
+      document.querySelector(selector)?.setAttribute('content', description);
+    });
 
     // Update canonical URL with language parameter
     const canonical = document.querySelector('link[rel="canonical"]');

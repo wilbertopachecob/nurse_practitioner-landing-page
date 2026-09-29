@@ -386,6 +386,29 @@ p { text-wrap: pretty; }
   font-size: 0.98rem;
   overflow-wrap: anywhere;
 }
+.practice-groups {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--border-color);
+  display: grid;
+  gap: var(--s-5);
+}
+.practice-groups > h4 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.practice-block h5 {
+  margin: 0 0 var(--s-3);
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--t-h3);
+  color: var(--text-primary);
+}
 .book-card {
   display: flex;
   flex-direction: column;
